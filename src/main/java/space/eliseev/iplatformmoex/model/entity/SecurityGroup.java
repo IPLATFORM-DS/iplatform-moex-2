@@ -7,7 +7,6 @@ import javax.persistence.*;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "security_group")
 public class SecurityGroup {
@@ -24,5 +23,5 @@ public class SecurityGroup {
     private String title;
 
     @Column(name = "is_hidden")
-    private boolean isHidden;
+    private Integer isHidden;
 }
