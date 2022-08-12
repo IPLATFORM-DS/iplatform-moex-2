@@ -1,4 +1,4 @@
-package space.eliseev.iplatformmoex.models;
+package space.eliseev.iplatformmoex.model.entity;
 
 import lombok.*;
 import javax.persistence.*;
