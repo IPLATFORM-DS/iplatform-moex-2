@@ -1,4 +1,4 @@
-package space.eliseev.iplatformmoex.emuns;
+package space.eliseev.iplatformmoex.model.enumeration;
 
 public enum Engine {
     STOCK,
