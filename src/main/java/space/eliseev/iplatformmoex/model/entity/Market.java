@@ -7,7 +7,6 @@ import javax.persistence.*;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "markets")
 public class Market {
@@ -39,5 +38,5 @@ public class Market {
     private String marketplace;
 
     @Column(name = "is_otc")
-    private boolean isOtc;
+    private Integer isOtc;
 }
