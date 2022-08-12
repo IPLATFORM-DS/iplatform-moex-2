@@ -1,4 +1,4 @@
-package space.eliseev.iplatformmoex.emuns;
+package space.eliseev.iplatformmoex.enums;
 
 public enum Market {
 
