@@ -3,11 +3,13 @@ spring:
     name: iplatform-moex
   datasource:
     driverClassName: org.postgresql.Driver
-    username: @db-username@
-    password: @db-password@
-    url: @db-url@
+    username: postgres
+    password: root
+    url: jdbc:postgresql://localhost:5432/iplatform_moex
   jpa:
     hibernate:
-      ddl-auto: validate
+      ddl-auto: create
   liquibase:
-    enabled: false
+    change-log: "classpath:db/changelog/db.changelog-sof.xml"
+
+#    enabled: false
