@@ -1,4 +1,4 @@
-package space.eliseev.iplatformmoex.enums;
+package space.eliseev.iplatformmoex.model.enumeration;
 
 public enum BoardGroup {
     STOCK_INDEX,
