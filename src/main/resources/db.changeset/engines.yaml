@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: engines
+      author: Auezov Kuanysh
+      changes:
+        - createTable:
+            tableName: engines
+            columns:
+              - column:
+                  name: id
+                  type: INTEGER
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: VARCHAR(45)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: title
+                  type: VARCHAR(765)
+                  constraints:
+                    nullable: false
