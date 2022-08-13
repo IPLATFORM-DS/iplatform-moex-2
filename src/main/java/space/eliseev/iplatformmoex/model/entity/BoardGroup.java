@@ -20,22 +20,22 @@ public class BoardGroup {
     private Integer trade_engine_id;
 
     @Column(name = "trade_engine_name")
-    private Integer trade_engine_name;
+    private String trade_engine_name;
 
     @Column(name = "trade_engine_title")
-    private Integer trade_engine_title;
+    private String trade_engine_title;
 
     @Column(name = "market_id")
     private Integer market_id;
 
     @Column(name = "market_name")
-    private Integer market_name;
+    private String market_name;
 
     @Column(name = "name",unique = true)
-    private Integer name;
+    private String name;
 
     @Column(name = "title")
-    private Integer title;
+    private String title;
 
     @Column(name = "is_default")
     private Integer is_default;
@@ -50,6 +50,6 @@ public class BoardGroup {
     private Integer is_order_driven;
 
     @Column(name = "category")
-    private Integer category;
+    private String category;
 
 }
