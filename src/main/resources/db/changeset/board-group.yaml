@@ -72,17 +72,3 @@ databaseChangeLog:
                     nullable: false
                   name: category
                   type: VARCHAR(45)
-
-# id (int32)
-# trade_engine_id (int32)
-# trade_engine_name (string:45)
-# trade_engine_title (string:765)
-# market_id (int32)
-# market_name (string:45)
-# name (string:192)
-# title (string:765)
-# is_default (int32)
-# board_group_id (int32)
-# is_traded (int32)
-# is_order_driven (int32)
-# category (string:45)
