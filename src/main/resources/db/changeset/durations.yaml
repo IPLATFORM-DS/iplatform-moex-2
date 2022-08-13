@@ -4,31 +4,31 @@ databaseChangeLog:
       author: Auezov Kuanysh
       changes:
         createTable:
-          tableName: durations
-          columns:
-            - column:
-              name: interval
-              type: INTEGER
-              constraints:
-                nullable: false
-            - column:
-                name: duration
-                type: INTEGER
-                constraints:
-                  nullable: false;
-            - column:
-                name: days
-                type: INTEGER
-                constraints:
-                  nullable: false
-            - column:
-                name: title
-                type: VARCHAR(765)
-                constraints:
-                  nullable: false
-            - column:
-                name: hint
-                type: VARCHAR(765)
-                constraints:
-                  nullable: false
+          - tableName: durations
+            columns:
+              - column:
+                  name: interval
+                  type: INTEGER
+                  constraints:
+                    nullable: false
+              - column:
+                  name: duration
+                  type: INTEGER
+                  constraints:
+                    nullable: false;
+              - column:
+                  name: days
+                  type: INTEGER
+                  constraints:
+                    nullable: false
+              - column:
+                  name: title
+                  type: VARCHAR(765)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: hint
+                  type: VARCHAR(765)
+                  constraints:
+                    nullable: false
 
