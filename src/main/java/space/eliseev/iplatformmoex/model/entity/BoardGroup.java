@@ -1,0 +1,55 @@
+package space.eliseev.iplatformmoex.model.entity;
+
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.*;
+
+@Getter
+@Setter
+@Entity
+@Table(name = "board_group")
+public class BoardGroup {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Integer id;
+
+    @Column(name = "trade_engine_id")
+    private Integer trade_engine_id;
+
+    @Column(name = "trade_engine_name")
+    private Integer trade_engine_name;
+
+    @Column(name = "trade_engine_title")
+    private Integer trade_engine_title;
+
+    @Column(name = "market_id")
+    private Integer market_id;
+
+    @Column(name = "market_name")
+    private Integer market_name;
+
+    @Column(name = "name",unique = true)
+    private Integer name;
+
+    @Column(name = "title")
+    private Integer title;
+
+    @Column(name = "is_default")
+    private Integer is_default;
+
+    @Column(name = "board_group_id")
+    private Integer board_group_id;
+
+    @Column(name = "is_traded")
+    private Integer is_traded;
+
+    @Column(name = "is_order_driven")
+    private Integer is_order_driven;
+
+    @Column(name = "category")
+    private Integer category;
+
+}
