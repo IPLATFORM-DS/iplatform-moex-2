@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: security-collection
+      author: Temirov Karaydar
+      changes:
+        - createTable:
+            tableName: security_collection
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: id
+                  type: INTEGER
+              - column:
+                  constraints:
+                    nullable: false
+                  name: name
+                  type: VARCHAR(93)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: title
+                  type: VARCHAR(765)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: security_group_id
+                  type: INTEGER
