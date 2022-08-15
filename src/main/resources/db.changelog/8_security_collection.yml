@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: security_collection_id
+      id: 8_security_collection
       author: dmitriy
       changes:
         - createTable:
