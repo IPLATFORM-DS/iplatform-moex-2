@@ -1,0 +1,114 @@
+databaseChangeLog:
+  - changeSet:
+      id: engines_table_fill
+      author: sof
+      changes:
+        # https://iss.moex.com/iss/engines/
+        - insert:
+            tableName: engines
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: name
+                  value: stock
+              - column:
+                  name: title
+                  value: "Фондовый рынок и рынок депозитов"
+        - insert:
+            tableName: engines
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: name
+                  value: state
+              - column:
+                  name: title
+                  value: "Рынок ГЦБ (размещение)"
+        - insert:
+            tableName: engines
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: name
+                  value: currency
+              - column:
+                  name: title
+                  value: "Валютный рынок"
+        - insert:
+            tableName: engines
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: name
+                  value: futures
+              - column:
+                  name: title
+                  value: "Срочный рынок"
+        - insert:
+            tableName: engines
+            columns:
+              - column:
+                  name: id
+                  value: 5
+              - column:
+                  name: name
+                  value: commodity
+              - column:
+                  name: title
+                  value: "Товарный рынок"
+        - insert:
+            tableName: engines
+            columns:
+              - column:
+                  name: id
+                  value: 6
+              - column:
+                  name: name
+                  value: interventions
+              - column:
+                  name: title
+                  value: "Товарные интервенции"
+        - insert:
+            tableName: engines
+            columns:
+              - column:
+                  name: id
+                  value: 7
+              - column:
+                  name: name
+                  value: offboard
+              - column:
+                  name: title
+                  value: "ОТС-система"
+        - insert:
+            tableName: engines
+            columns:
+              - column:
+                  name: id
+                  value: 9
+              - column:
+                  name: name
+                  value: agro
+              - column:
+                  name: title
+                  value: "Агро"
+        - insert:
+            tableName: engines
+            columns:
+              - column:
+                  name: id
+                  value: 1012
+              - column:
+                  name: name
+                  value: otc
+              - column:
+                  name: title
+                  value: "OTC Система"
