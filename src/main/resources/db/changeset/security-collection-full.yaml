@@ -1,0 +1,1621 @@
+databaseChangeLog:
+  - changeSet:
+      id: security-collection-full
+      author: Temirov Karaydar
+      changes:
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 72
+              - column:
+                  name: name
+                  value: stock_index_all
+              - column:
+                  name: title
+                  value: Все индексы
+              - column:
+                  name: security_group_id
+                  value: 12
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 213
+              - column:
+                  name: name
+                  value: stock_index_shares
+              - column:
+                  name: title
+                  value: Основные индексы акций
+              - column:
+                  name: security_group_id
+                  value: 12
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 210
+              - column:
+                  name: name
+                  value: stock_index_shares_sectoral
+              - column:
+                  name: title
+                  value: Отраслевые индексы акций
+              - column:
+                  name: security_group_id
+                  value: 12
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 249
+              - column:
+                  name: name
+                  value: stock_index_total_return
+              - column:
+                  name: title
+                  value: Индексы акций полной доходности
+              - column:
+                  name: security_group_id
+                  value: 12
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 211
+              - column:
+                  name: name
+                  value: stock_index_shares_thematic
+              - column:
+                  name: title
+                  value: Тематические индексы акций
+              - column:
+                  name: security_group_id
+                  value: 12
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 207
+              - column:
+                  name: name
+                  value: stock_index_bonds
+              - column:
+                  name: title
+                  value: Основные индексы облигаций
+              - column:
+                  name: security_group_id
+                  value: 12
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 214
+              - column:
+                  name: name
+                  value: stock_index_bonds_state
+              - column:
+                  name: title
+                  value: Индексы государственных облигаций
+              - column:
+                  name: security_group_id
+                  value: 12
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 208
+              - column:
+                  name: name
+                  value: stock_index_bonds_corporate
+              - column:
+                  name: title
+                  value: Индексы корпоративных облигаций
+              - column:
+                  name: security_group_id
+                  value: 12
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 212
+              - column:
+                  name: name
+                  value: stock_index_bonds_municipal
+              - column:
+                  name: title
+                  value: Индексы муниципальных облигаций
+              - column:
+                  name: security_group_id
+                  value: 12
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 209
+              - column:
+                  name: name
+                  value: stock_index_bonds_retiring
+              - column:
+                  name: title
+                  value: Индексы активов пенсионных накоплений
+              - column:
+                  name: security_group_id
+                  value: 12
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 328
+              - column:
+                  name: name
+                  value: stock_index_eurobonds
+              - column:
+                  name: title
+                  value: Индексы еврооблигаций
+              - column:
+                  name: security_group_id
+                  value: 12
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 215
+              - column:
+                  name: name
+                  value: stock_index_volatility
+              - column:
+                  name: title
+                  value: Российские индексы волатильности
+              - column:
+                  name: security_group_id
+                  value: 12
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 259
+              - column:
+                  name: name
+                  value: stock_index_inav
+              - column:
+                  name: title
+                  value: INAV
+              - column:
+                  name: security_group_id
+                  value: 12
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 115
+              - column:
+                  name: name
+                  value: stock_index_repo
+              - column:
+                  name: title
+                  value: Индикаторы ставок РЕПО
+              - column:
+                  name: security_group_id
+                  value: 12
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 295
+              - column:
+                  name: name
+                  value: stock_index_mmix
+              - column:
+                  name: title
+                  value: Money market index
+              - column:
+                  name: security_group_id
+                  value: 12
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 229
+              - column:
+                  name: name
+                  value: stock_index_quotationlist_bond
+              - column:
+                  name: title
+                  value: Облигационные индексы котировальных листов
+              - column:
+                  name: security_group_id
+                  value: 12
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 324
+              - column:
+                  name: name
+                  value: stock_index_commodity
+              - column:
+                  name: title
+                  value: Товарные индексы
+              - column:
+                  name: security_group_id
+                  value: 12
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 323
+              - column:
+                  name: name
+                  value: stock_index_sdfi
+              - column:
+                  name: title
+                  value: Индексы СПФИ
+              - column:
+                  name: security_group_id
+                  value: 12
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 327
+              - column:
+                  name: name
+                  value: stock_index_custom
+              - column:
+                  name: title
+                  value: Заказные индексы
+              - column:
+                  name: security_group_id
+                  value: 12
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: name
+                  value: stock_shares_all
+              - column:
+                  name: title
+                  value: Все акции
+              - column:
+                  name: security_group_id
+                  value: 4
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 160
+              - column:
+                  name: name
+                  value: stock_shares_one
+              - column:
+                  name: title
+                  value: Уровень 1
+              - column:
+                  name: security_group_id
+                  value: 4
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 161
+              - column:
+                  name: name
+                  value: stock_shares_two
+              - column:
+                  name: title
+                  value: Уровень 2
+              - column:
+                  name: security_group_id
+                  value: 4
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 162
+              - column:
+                  name: name
+                  value: stock_shares_three
+              - column:
+                  name: title
+                  value: Уровень 3
+              - column:
+                  name: security_group_id
+                  value: 4
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 7
+              - column:
+                  name: name
+                  value: stock_bonds_all
+              - column:
+                  name: title
+                  value: Все
+              - column:
+                  name: security_group_id
+                  value: 3
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 163
+              - column:
+                  name: name
+                  value: stock_bonds_one
+              - column:
+                  name: title
+                  value: Все уровень 1
+              - column:
+                  name: security_group_id
+                  value: 3
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 164
+              - column:
+                  name: name
+                  value: stock_bonds_two
+              - column:
+                  name: title
+                  value: Все уровень 2
+              - column:
+                  name: security_group_id
+                  value: 3
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 165
+              - column:
+                  name: name
+                  value: stock_bonds_three
+              - column:
+                  name: title
+                  value: Все уровень 3
+              - column:
+                  name: security_group_id
+                  value: 3
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 189
+              - column:
+                  name: name
+                  value: stock_bonds_corp_all
+              - column:
+                  name: title
+                  value: Все корпоративные
+              - column:
+                  name: security_group_id
+                  value: 3
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 202
+              - column:
+                  name: name
+                  value: stock_bonds_corp_one
+              - column:
+                  name: title
+                  value: Корпоративные уровень 1
+              - column:
+                  name: security_group_id
+                  value: 3
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 194
+              - column:
+                  name: name
+                  value: stock_bonds_corp_two
+              - column:
+                  name: title
+                  value: Корпоративные уровень 2
+              - column:
+                  name: security_group_id
+                  value: 3
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 188
+              - column:
+                  name: name
+                  value: stock_bonds_corp_three
+              - column:
+                  name: title
+                  value: Корпоративные уровень 3
+              - column:
+                  name: security_group_id
+                  value: 3
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 200
+              - column:
+                  name: name
+                  value: stock_bonds_exchange_all
+              - column:
+                  name: title
+                  value: Все биржевые
+              - column:
+                  name: security_group_id
+                  value: 3
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 185
+              - column:
+                  name: name
+                  value: stock_exchange_corp_one
+              - column:
+                  name: title
+                  value: Биржевые уровень 1
+              - column:
+                  name: security_group_id
+                  value: 3
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 195
+              - column:
+                  name: name
+                  value: stock_bonds_exchange_two
+              - column:
+                  name: title
+                  value: Биржевые уровень 2
+              - column:
+                  name: security_group_id
+                  value: 3
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 190
+              - column:
+                  name: name
+                  value: stock_bonds_exchange_three
+              - column:
+                  name: title
+                  value: Биржевые уровень 3
+              - column:
+                  name: security_group_id
+                  value: 3
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 205
+              - column:
+                  name: name
+                  value: stock_bonds_municipal_all
+              - column:
+                  name: title
+                  value: Все муниципальные
+              - column:
+                  name: security_group_id
+                  value: 3
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 201
+              - column:
+                  name: name
+                  value: stock_bonds_municipal_one
+              - column:
+                  name: title
+                  value: Муниципальные уровень 1
+              - column:
+                  name: security_group_id
+                  value: 3
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 191
+              - column:
+                  name: name
+                  value: stock_bonds_municipal_two
+              - column:
+                  name: title
+                  value: Муниципальные уровень 2
+              - column:
+                  name: security_group_id
+                  value: 3
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 203
+              - column:
+                  name: name
+                  value: stock_bonds_municipal_three
+              - column:
+                  name: title
+                  value: Муниципальные уровень 3
+              - column:
+                  name: security_group_id
+                  value: 3
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 198
+              - column:
+                  name: name
+                  value: stock_bonds_subfederal_all
+              - column:
+                  name: title
+                  value: Все субъектов РФ
+              - column:
+                  name: security_group_id
+                  value: 3
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 206
+              - column:
+                  name: name
+                  value: stock_bonds_subfederal_one
+              - column:
+                  name: title
+                  value: Субъектов РФ уровень 1
+              - column:
+                  name: security_group_id
+                  value: 3
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 204
+              - column:
+                  name: name
+                  value: stock_bonds_subfederal_two
+              - column:
+                  name: title
+                  value: Субъектов РФ уровень 2
+              - column:
+                  name: security_group_id
+                  value: 3
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 192
+              - column:
+                  name: name
+                  value: stock_bonds_subfederal_three
+              - column:
+                  name: title
+                  value: Субъектов РФ уровень 3
+              - column:
+                  name: security_group_id
+                  value: 3
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 186
+              - column:
+                  name: name
+                  value: stock_bonds_ofz_all
+              - column:
+                  name: title
+                  value: Все ОФЗ
+              - column:
+                  name: security_group_id
+                  value: 3
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 193
+              - column:
+                  name: name
+                  value: stock_bonds_cb_all
+              - column:
+                  name: title
+                  value: Все Банка России
+              - column:
+                  name: security_group_id
+                  value: 3
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 197
+              - column:
+                  name: name
+                  value: stock_bonds_ifi_all
+              - column:
+                  name: title
+                  value: Все иностранных эмитентов
+              - column:
+                  name: security_group_id
+                  value: 3
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 199
+              - column:
+                  name: name
+                  value: stock_bonds_ifi_one
+              - column:
+                  name: title
+                  value: Иностранных эмитентов уровень 1
+              - column:
+                  name: security_group_id
+                  value: 3
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 187
+              - column:
+                  name: name
+                  value: stock_bonds_ifi_two
+              - column:
+                  name: title
+                  value: Иностранных эмитентов уровень 2
+              - column:
+                  name: security_group_id
+                  value: 3
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 196
+              - column:
+                  name: name
+                  value: stock_bonds_ifi_three
+              - column:
+                  name: title
+                  value: Иностранных эмитентов уровень 3
+              - column:
+                  name: security_group_id
+                  value: 3
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 303
+              - column:
+                  name: name
+                  value: offboard_bonds_all
+              - column:
+                  name: title
+                  value: Все Коммерческие
+              - column:
+                  name: security_group_id
+                  value: 3
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 177
+              - column:
+                  name: name
+                  value: currency_selt_all_spot
+              - column:
+                  name: title
+                  value: Все валюты СПОТ
+              - column:
+                  name: security_group_id
+                  value: 9
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 170
+              - column:
+                  name: name
+                  value: currency_selt_all_swap
+              - column:
+                  name: title
+                  value: Все валюты СВОП
+              - column:
+                  name: security_group_id
+                  value: 9
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 173
+              - column:
+                  name: name
+                  value: currency_selt_usd_spot
+              - column:
+                  name: title
+                  value: USD/RUB СПОТ
+              - column:
+                  name: security_group_id
+                  value: 9
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 174
+              - column:
+                  name: name
+                  value: currency_selt_usd_swap
+              - column:
+                  name: title
+                  value: USD/RUB СВОП
+              - column:
+                  name: security_group_id
+                  value: 9
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 172
+              - column:
+                  name: name
+                  value: currency_selt_eur_spot
+              - column:
+                  name: title
+                  value: EUR/RUB СПОТ
+              - column:
+                  name: security_group_id
+                  value: 9
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 179
+              - column:
+                  name: name
+                  value: currency_selt_eur_swap
+              - column:
+                  name: title
+                  value: EUR/RUB СВОП
+              - column:
+                  name: security_group_id
+                  value: 9
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 181
+              - column:
+                  name: name
+                  value: currency_selt_cny_spot
+              - column:
+                  name: title
+                  value: CNY/RUB СПОТ
+              - column:
+                  name: security_group_id
+                  value: 9
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 176
+              - column:
+                  name: name
+                  value: currency_selt_cny_swap
+              - column:
+                  name: title
+                  value: CNY/RUB СВОП
+              - column:
+                  name: security_group_id
+                  value: 9
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 178
+              - column:
+                  name: name
+                  value: currency_selt_eurusd_spot
+              - column:
+                  name: title
+                  value: EUR/USD СПОТ
+              - column:
+                  name: security_group_id
+                  value: 9
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 180
+              - column:
+                  name: name
+                  value: currency_selt_eurusd_swap
+              - column:
+                  name: title
+                  value: EUR/USD СВОП
+              - column:
+                  name: security_group_id
+                  value: 9
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 171
+              - column:
+                  name: name
+                  value: currency_selt_other_spot
+              - column:
+                  name: title
+                  value: Другие валюты СПОТ
+              - column:
+                  name: security_group_id
+                  value: 9
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 175
+              - column:
+                  name: name
+                  value: currency_selt_other_swap
+              - column:
+                  name: title
+                  value: Другие валюты СВОП
+              - column:
+                  name: security_group_id
+                  value: 9
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 227
+              - column:
+                  name: name
+                  value: futures_forts_all
+              - column:
+                  name: title
+                  value: Все фьючерсы
+              - column:
+                  name: security_group_id
+                  value: 10
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 226
+              - column:
+                  name: name
+                  value: futures_forts_index
+              - column:
+                  name: title
+                  value: Фьючерсы на индексы
+              - column:
+                  name: security_group_id
+                  value: 10
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 224
+              - column:
+                  name: name
+                  value: futures_forts_shares
+              - column:
+                  name: title
+                  value: Фьючерсы на акции
+              - column:
+                  name: security_group_id
+                  value: 10
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 225
+              - column:
+                  name: name
+                  value: futures_forts_currency
+              - column:
+                  name: title
+                  value: Фьючерсы на валюты
+              - column:
+                  name: security_group_id
+                  value: 10
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 228
+              - column:
+                  name: name
+                  value: futures_forts_interest
+              - column:
+                  name: title
+                  value: Фьючерсы на процентные ставки
+              - column:
+                  name: security_group_id
+                  value: 10
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 223
+              - column:
+                  name: name
+                  value: futures_forts_commodity
+              - column:
+                  name: title
+                  value: Фьючерсы на товарные контракты
+              - column:
+                  name: security_group_id
+                  value: 10
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 260
+              - column:
+                  name: name
+                  value: futures_forts_ofz
+              - column:
+                  name: title
+                  value: Фьючерсы на ОФЗ
+              - column:
+                  name: security_group_id
+                  value: 10
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 218
+              - column:
+                  name: name
+                  value: futures_options_all
+              - column:
+                  name: title
+                  value: Все опционы
+              - column:
+                  name: security_group_id
+                  value: 26
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 222
+              - column:
+                  name: name
+                  value: futures_options_index
+              - column:
+                  name: title
+                  value: Опционы ф. на индекс
+              - column:
+                  name: security_group_id
+                  value: 26
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 221
+              - column:
+                  name: name
+                  value: futures_options_shares
+              - column:
+                  name: title
+                  value: Опционы ф. на акции
+              - column:
+                  name: security_group_id
+                  value: 26
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 220
+              - column:
+                  name: name
+                  value: futures_options_currency
+              - column:
+                  name: title
+                  value: Опционы ф. на валюты
+              - column:
+                  name: security_group_id
+                  value: 26
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 219
+              - column:
+                  name: name
+                  value: futures_options_commodity
+              - column:
+                  name: title
+                  value: Опционы ф. на товарные контракты
+              - column:
+                  name: security_group_id
+                  value: 26
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 130
+              - column:
+                  name: name
+                  value: stock_dr_all
+              - column:
+                  name: title
+                  value: Все ДР
+              - column:
+                  name: security_group_id
+                  value: 18
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 301
+              - column:
+                  name: name
+                  value: stock_foreign_shares_all
+              - column:
+                  name: title
+                  value: Иностранные ц.б.
+              - column:
+                  name: security_group_id
+                  value: 33
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 60
+              - column:
+                  name: name
+                  value: stock_eurobond_all
+              - column:
+                  name: title
+                  value: Все
+              - column:
+                  name: security_group_id
+                  value: 6
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 184
+              - column:
+                  name: name
+                  value: stock_eurobond_one
+              - column:
+                  name: title
+                  value: Уровень 1
+              - column:
+                  name: security_group_id
+                  value: 6
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 182
+              - column:
+                  name: name
+                  value: stock_eurobond_two
+              - column:
+                  name: title
+                  value: Уровень 2
+              - column:
+                  name: security_group_id
+                  value: 6
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 183
+              - column:
+                  name: name
+                  value: stock_eurobond_three
+              - column:
+                  name: title
+                  value: Уровень 3
+              - column:
+                  name: security_group_id
+                  value: 6
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 59
+              - column:
+                  name: name
+                  value: stock_ppif_all
+              - column:
+                  name: title
+                  value: Все ПИФы
+              - column:
+                  name: security_group_id
+                  value: 5
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 166
+              - column:
+                  name: name
+                  value: stock_ppif_one
+              - column:
+                  name: title
+                  value: Уровень 1
+              - column:
+                  name: security_group_id
+                  value: 5
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 167
+              - column:
+                  name: name
+                  value: stock_ppif_two
+              - column:
+                  name: title
+                  value: Уровень 2
+              - column:
+                  name: security_group_id
+                  value: 5
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 168
+              - column:
+                  name: name
+                  value: stock_ppif_three
+              - column:
+                  name: title
+                  value: Уровень 3
+              - column:
+                  name: security_group_id
+                  value: 5
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 151
+              - column:
+                  name: name
+                  value: stock_etf_all
+              - column:
+                  name: title
+                  value: Все паи иностранных фондов
+              - column:
+                  name: security_group_id
+                  value: 20
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 216
+              - column:
+                  name: name
+                  value: currency_metal_gold
+              - column:
+                  name: title
+                  value: Золото
+              - column:
+                  name: security_group_id
+                  value: 24
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 217
+              - column:
+                  name: name
+                  value: currency_metal_silver
+              - column:
+                  name: title
+                  value: Серебро
+              - column:
+                  name: security_group_id
+                  value: 24
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 152
+              - column:
+                  name: name
+                  value: stock_qnv_all
+              - column:
+                  name: title
+                  value: Все квал. инвесторы
+              - column:
+                  name: security_group_id
+                  value: 21
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 230
+              - column:
+                  name: name
+                  value: stock_gcc_all
+              - column:
+                  name: title
+                  value: Клиринговые сертификаты участия
+              - column:
+                  name: security_group_id
+                  value: 27
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 258
+              - column:
+                  name: name
+                  value: stock_deposit_all
+              - column:
+                  name: title
+                  value: Депозиты с ЦК
+              - column:
+                  name: security_group_id
+                  value: 29
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 286
+              - column:
+                  name: name
+                  value: currency_futures_swap_all
+              - column:
+                  name: title
+                  value: Все валюты поставочные СВОП КОНТРАКТЫ
+              - column:
+                  name: security_group_id
+                  value: 28
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 254
+              - column:
+                  name: name
+                  value: currency_futures_delivery_all
+              - column:
+                  name: title
+                  value: Все валюты поставочные ФЬЮЧЕРСЫ
+              - column:
+                  name: security_group_id
+                  value: 28
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 287
+              - column:
+                  name: name
+                  value: currency_futures_swap_usd
+              - column:
+                  name: title
+                  value: USD/RUB поставочный СВОП КОНТРАКТ
+              - column:
+                  name: security_group_id
+                  value: 28
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 252
+              - column:
+                  name: name
+                  value: currency_futures_delivery_usd
+              - column:
+                  name: title
+                  value: USD/RUB поставочный ФЬЮЧЕРС
+              - column:
+                  name: security_group_id
+                  value: 28
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 288
+              - column:
+                  name: name
+                  value: currency_futures_swap_eur
+              - column:
+                  name: title
+                  value: EUR/RUB поставочный СВОП КОНТРАКТ
+              - column:
+                  name: security_group_id
+                  value: 28
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 255
+              - column:
+                  name: name
+                  value: currency_futures_delivery_eur
+              - column:
+                  name: title
+                  value: EUR/RUB поставочный ФЬЮЧЕРС
+              - column:
+                  name: security_group_id
+                  value: 28
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 289
+              - column:
+                  name: name
+                  value: currency_futures_swap_cny
+              - column:
+                  name: title
+                  value: CNY/RUB поставочный СВОП КОНТРАКТ
+              - column:
+                  name: security_group_id
+                  value: 28
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 250
+              - column:
+                  name: name
+                  value: currency_futures_delivery_cny
+              - column:
+                  name: title
+                  value: CNY/RUB поставочный ФЬЮЧЕРС
+              - column:
+                  name: security_group_id
+                  value: 28
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 292
+              - column:
+                  name: name
+                  value: currency_futures_swap_other
+              - column:
+                  name: title
+                  value: Другие валюты поставочный СВОП КОНТРАКТ
+              - column:
+                  name: security_group_id
+                  value: 28
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 293
+              - column:
+                  name: name
+                  value: currency_futures_delivery_others
+              - column:
+                  name: title
+                  value: Другие валюты поставочный ФЬЮЧЕРС
+              - column:
+                  name: security_group_id
+                  value: 28
+
+        - insert:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  value: 297
+              - column:
+                  name: name
+                  value: currency_indices_all
+              - column:
+                  name: title
+                  value: Все валютные фиксинги
+              - column:
+                  name: security_group_id
+                  value: 31
