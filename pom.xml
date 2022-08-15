@@ -82,6 +82,17 @@
 
     <profiles>
         <profile>
+            <id>sof</id>
+            <properties>
+                <db-url>jdbc:postgresql://localhost:5432/iplatform_moex</db-url>
+                <db-username>postgres</db-username>
+                <db-password>root</db-password>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
             <id>dev</id>
             <properties>
                 <db-url>jdbc:postgresql://localhost:5432/iplatform_moex</db-url>
