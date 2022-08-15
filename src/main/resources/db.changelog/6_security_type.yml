@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: security_type_id
+      id: 6_security_type
       author: dmitriy
       changes:
         - createTable:
