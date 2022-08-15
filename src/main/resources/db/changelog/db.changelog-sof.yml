@@ -9,47 +9,26 @@ databaseChangeLog:
                   constraints:
                     nullable: false
                     primaryKey: true
-                    primaryKeyName: board_id
+                    primaryKeyName: check_metadata_id
                   name: id
-                  type: integer
+                  type: BIGINT
               - column:
                   constraints:
                     nullable: false
-                  name: board_group_id
-                  type: integer
+                  name: timestamp
+                  remarks: Дата проверки
+                  type: TIMESTAMP
               - column:
                   constraints:
                     nullable: false
-                  name: engine_id
-                  type: integer
+                  name: index
+                  remarks: Справочник
+                  type: VARCHAR
               - column:
                   constraints:
                     nullable: false
-                  name: market_id
-                  type: integer
-              - column:
-                  constraints:
-                    nullable: false
-                  name: boardid
-                  type: varchar(12)
-              - column:
-                  constraints:
-                    nullable: false
-                  name: board_title
-                  type: varchar(318)
-              - column:
-                  constraints:
-                    nullable: false
-                  name: is_traded
-                  type: smallint
-              - column:
-                  constraints:
-                    nullable: false
-                  name: has_candles
-                  type: smallint
-              - column:
-                  constraints:
-                    nullable: false
-                  name: is_primary
-                  type: smallint
-            tableName: boards
+                  name: is_valid
+                  remarks: Результат проверки
+                  type: BOOLEAN
+            tableName: check_metadata
+
