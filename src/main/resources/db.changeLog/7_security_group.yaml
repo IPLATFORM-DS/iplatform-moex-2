@@ -1,9 +1,10 @@
 databaseChangeLog:
   - changeSet:
-      - id: security_group_id
+      - id: 7_security_group
         author: dmitriy
           changes:
               - createTable:
+                tableName: security_group
                 columns:
                   - column:
                       constraints:
@@ -21,4 +22,3 @@ databaseChangeLog:
                   - column:
                       name: is_hidden
                       type: INTEGER
-                tableName: security_group
