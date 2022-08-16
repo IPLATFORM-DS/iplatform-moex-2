@@ -1,0 +1,3 @@
+databaseChangeLog:
+  - include:
+      file: db/changeset/001-create-table-board-group.yaml
