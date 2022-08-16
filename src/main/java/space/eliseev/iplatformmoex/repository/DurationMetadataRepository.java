@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import space.eliseev.iplatformmoex.model.entity.*;
 
 @Repository
-public interface SecurityCollectionMetadataRepository extends JpaRepository<SecurityCollection, Integer> {
+public interface DurationMetadataRepository extends JpaRepository<Duration, Integer> {
 }
