@@ -1,6 +1,6 @@
 package space.eliseev.iplatformmoex.controller;
 
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/metadata", produces = "application/json; charset=UTF-8")
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class MetadataController {
     private final MetadataService metadataService;
 

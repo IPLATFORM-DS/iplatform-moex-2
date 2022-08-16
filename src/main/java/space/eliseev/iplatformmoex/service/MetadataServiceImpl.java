@@ -1,62 +1,62 @@
 package space.eliseev.iplatformmoex.service;
 
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import space.eliseev.iplatformmoex.model.entity.*;
 import space.eliseev.iplatformmoex.repository.*;
 
 import java.util.List;
 
-@AllArgsConstructor
 @Service
+@RequiredArgsConstructor
 public class MetadataServiceImpl implements MetadataService {
-    private final EngineMetadataRepository engineMetadataRepository;
-    private final MarketMetadataRepository marketMetadataRepository;
-    private final BoardMetadataRepository boardMetadataRepository;
-    private final BoardGroupMetadataRepository boardGroupMetadataRepository;
-    private final DurationMetadataRepository durationMetadataRepository;
-    private final SecurityTypeMetadataRepository securityTypeMetadataRepository;
-    private final SecurityGroupMetadataRepository securityGroupMetadataRepository;
-    private final SecurityCollectionMetadataRepository securityCollectionMetadataRepository;
+    private final EngineRepository engineRepository;
+    private final MarketRepository marketRepository;
+    private final BoardRepository boardRepository;
+    private final BoardGroupRepository boardGroupRepository;
+    private final DurationRepository durationRepository;
+    private final SecurityTypeRepository securityTypeRepository;
+    private final SecurityGroupRepository securityGroupRepository;
+    private final SecurityCollectionRepository securityCollectionRepository;
 
 
     @Override
     public List<Engine> getAllEngines() {
-        return engineMetadataRepository.findAll();
+        return engineRepository.findAll();
     }
 
     @Override
     public List<Market> getAllMarkets() {
-        return marketMetadataRepository.findAll();
+        return marketRepository.findAll();
     }
 
     @Override
     public List<Board> getAllBoards() {
-        return boardMetadataRepository.findAll();
+        return boardRepository.findAll();
     }
 
     @Override
     public List<BoardGroup> getAllBoardGroups() {
-        return boardGroupMetadataRepository.findAll();
+        return boardGroupRepository.findAll();
     }
 
     @Override
     public List<Duration> getAllDurations() {
-        return durationMetadataRepository.findAll();
+        return durationRepository.findAll();
     }
 
     @Override
     public List<SecurityType> getAllSecurityTypes() {
-        return securityTypeMetadataRepository.findAll();
+        return securityTypeRepository.findAll();
     }
 
     @Override
     public List<SecurityGroup> getAllSecurityGroups() {
-        return securityGroupMetadataRepository.findAll();
+        return securityGroupRepository.findAll();
     }
 
     @Override
     public List<SecurityCollection> getAllSecurityCollections() {
-        return securityCollectionMetadataRepository.findAll();
+        return securityCollectionRepository.findAll();
     }
 }

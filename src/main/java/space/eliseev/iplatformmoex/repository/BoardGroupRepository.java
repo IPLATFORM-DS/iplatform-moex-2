@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import space.eliseev.iplatformmoex.model.entity.*;
 
 @Repository
-public interface BoardMetadataRepository extends JpaRepository<Board, Integer> {
+public interface BoardGroupRepository extends JpaRepository<BoardGroup, Integer> {
 }
