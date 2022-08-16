@@ -1,0 +1,35 @@
+package space.eliseev.iplatformmoex.model.enumeration;
+
+public enum Market {
+
+    SUGAR,
+    INDEX,
+    SHARES,
+    BONDS,
+    NDM,
+    OTC,
+    CCP,
+    DEPOSIT,
+    REPO,
+    QNV,
+    MAMC,
+    FOREIGNSHARES,
+    FOREIGNNDM,
+    MOEXBOARD,
+    GCC,
+    CREDIT,
+    SELT,
+    FUTURES,
+    MAIN,
+    FORTS,
+    OPTIONS,
+    FORTSIQS,
+    OPTIONSIQS,
+    NONRESNDM,
+    NONRESREPO,
+    NONRESCCP,
+    GRAIN,
+    BUYAUCTIONS,
+    STANDARD,
+    CLASSICA
+}

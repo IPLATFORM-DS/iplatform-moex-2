@@ -10,4 +10,4 @@ spring:
     hibernate:
       ddl-auto: validate
   liquibase:
-    enabled: false
+    enabled: true
