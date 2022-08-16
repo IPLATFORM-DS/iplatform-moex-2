@@ -1,7 +1,0 @@
-databaseChangeLog:
-  - include:
-      file: db/changeset/board-group.yaml
-  - include:
-      file: db/changeset/security-collection.yaml
-  - include:
-      file: db/changeset/security-collection-full.yaml
