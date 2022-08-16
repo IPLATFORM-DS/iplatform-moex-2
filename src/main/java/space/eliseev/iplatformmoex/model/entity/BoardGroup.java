@@ -9,7 +9,11 @@ import javax.persistence.*;
 @Setter
 @Entity
 @Table(name = "board_group")
-public class BoardGroup extends BaseEntity{
+public class BoardGroup {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Integer id;
 
     @Column(name = "trade_engine_id")
     private Integer trade_engine_id;
