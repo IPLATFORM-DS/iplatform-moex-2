@@ -1,10 +1,10 @@
 databaseChangeLog:
   - changeSet:
-      id: 010-fill-in-table-engines
+      id: 010-fill-in-table-engine
       author: sof
       changes:
         - insert:
-            tableName: engines
+            tableName: engine
             columns:
               - column:
                   name: id
@@ -16,7 +16,7 @@ databaseChangeLog:
                   name: title
                   value: "Фондовый рынок и рынок депозитов"
         - insert:
-            tableName: engines
+            tableName: engine
             columns:
               - column:
                   name: id
@@ -28,7 +28,7 @@ databaseChangeLog:
                   name: title
                   value: "Рынок ГЦБ (размещение)"
         - insert:
-            tableName: engines
+            tableName: engine
             columns:
               - column:
                   name: id
@@ -40,7 +40,7 @@ databaseChangeLog:
                   name: title
                   value: "Валютный рынок"
         - insert:
-            tableName: engines
+            tableName: engine
             columns:
               - column:
                   name: id
@@ -52,7 +52,7 @@ databaseChangeLog:
                   name: title
                   value: "Срочный рынок"
         - insert:
-            tableName: engines
+            tableName: engine
             columns:
               - column:
                   name: id
@@ -64,7 +64,7 @@ databaseChangeLog:
                   name: title
                   value: "Товарный рынок"
         - insert:
-            tableName: engines
+            tableName: engine
             columns:
               - column:
                   name: id
@@ -76,7 +76,7 @@ databaseChangeLog:
                   name: title
                   value: "Товарные интервенции"
         - insert:
-            tableName: engines
+            tableName: engine
             columns:
               - column:
                   name: id
@@ -88,7 +88,7 @@ databaseChangeLog:
                   name: title
                   value: "ОТС-система"
         - insert:
-            tableName: engines
+            tableName: engine
             columns:
               - column:
                   name: id
@@ -100,7 +100,7 @@ databaseChangeLog:
                   name: title
                   value: "Агро"
         - insert:
-            tableName: engines
+            tableName: engine
             columns:
               - column:
                   name: id
