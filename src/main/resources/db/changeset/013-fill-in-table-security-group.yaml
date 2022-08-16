@@ -1,0 +1,275 @@
+databaseChangeLog:
+  - changeSet:
+      id: 013-fill-in-table-security-group
+      author: sof
+      changes:
+        - insert:
+            tableName: security_group
+            columns:
+              - column:
+                  name: id
+                  value: 12
+              - column:
+                  name: name
+                  value: stock_index
+              - column:
+                  name: title
+                  value: "Индексы"
+              - column:
+                  name: is_hidden
+                  value: 0
+        - insert:
+            tableName: security_group
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: name
+                  value: stock_shares
+              - column:
+                  name: title
+                  value: "Акции"
+              - column:
+                  name: is_hidden
+                  value: 0
+        - insert:
+            tableName: security_group
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: name
+                  value: stock_bonds
+              - column:
+                  name: title
+                  value: "Облигации"
+              - column:
+                  name: is_hidden
+                  value: 0
+        - insert:
+            tableName: security_group
+            columns:
+              - column:
+                  name: id
+                  value: 9
+              - column:
+                  name: name
+                  value: currency_selt
+              - column:
+                  name: title
+                  value: "Валюта"
+              - column:
+                  name: is_hidden
+                  value: 0
+        - insert:
+            tableName: security_group
+            columns:
+              - column:
+                  name: id
+                  value: 10
+              - column:
+                  name: name
+                  value: futures_forts
+              - column:
+                  name: title
+                  value: "Фьючерсы"
+              - column:
+                  name: is_hidden
+                  value: 0
+        - insert:
+            tableName: security_group
+            columns:
+              - column:
+                  name: id
+                  value: 26
+              - column:
+                  name: name
+                  value: futures_options
+              - column:
+                  name: title
+                  value: "Опционы"
+              - column:
+                  name: is_hidden
+                  value: 0
+        - insert:
+            tableName: security_group
+            columns:
+              - column:
+                  name: id
+                  value: 18
+              - column:
+                  name: name
+                  value: stock_dr
+              - column:
+                  name: title
+                  value: "Депозитарные расписки"
+              - column:
+                  name: is_hidden
+                  value: 0
+        - insert:
+            tableName: security_group
+            columns:
+              - column:
+                  name: id
+                  value: 33
+              - column:
+                  name: name
+                  value: stock_foreign_shares
+              - column:
+                  name: title
+                  value: "Иностранные ц.б."
+              - column:
+                  name: is_hidden
+                  value: 0
+        - insert:
+            tableName: security_group
+            columns:
+              - column:
+                  name: id
+                  value: 6
+              - column:
+                  name: name
+                  value: stock_eurobond
+              - column:
+                  name: title
+                  value: "Еврооблигации"
+              - column:
+                  name: is_hidden
+                  value: 0
+        - insert:
+            tableName: security_group
+            columns:
+              - column:
+                  name: id
+                  value: 5
+              - column:
+                  name: name
+                  value: stock_ppif
+              - column:
+                  name: title
+                  value: "Паи ПИФов"
+              - column:
+                  name: is_hidden
+                  value: 0
+        - insert:
+            tableName: security_group
+            columns:
+              - column:
+                  name: id
+                  value: 20
+              - column:
+                  name: name
+                  value: stock_etf
+              - column:
+                  name: title
+                  value: "Биржевые фонды"
+              - column:
+                  name: is_hidden
+                  value: 0
+        - insert:
+            tableName: security_group
+            columns:
+              - column:
+                  name: id
+                  value: 24
+              - column:
+                  name: name
+                  value: currency_metal
+              - column:
+                  name: title
+                  value: "Драгоценные металлы"
+              - column:
+                  name: is_hidden
+                  value: 0
+        - insert:
+            tableName: security_group
+            columns:
+              - column:
+                  name: id
+                  value: 21
+              - column:
+                  name: name
+                  value: stock_qnv
+              - column:
+                  name: title
+                  value: "Квал. инвесторы"
+              - column:
+                  name: is_hidden
+                  value: 0
+        - insert:
+            tableName: security_group
+            columns:
+              - column:
+                  name: id
+                  value: 27
+              - column:
+                  name: name
+                  value: stock_gcc
+              - column:
+                  name: title
+                  value: "Клиринговые сертификаты участия"
+              - column:
+                  name: is_hidden
+                  value: 0
+        - insert:
+            tableName: security_group
+            columns:
+              - column:
+                  name: id
+                  value: 29
+              - column:
+                  name: name
+                  value: stock_deposit
+              - column:
+                  name: title
+                  value: "Депозиты с ЦК"
+              - column:
+                  name: is_hidden
+                  value: 0
+        - insert:
+            tableName: security_group
+            columns:
+              - column:
+                  name: id
+                  value: 28
+              - column:
+                  name: name
+                  value: currency_futures
+              - column:
+                  name: title
+                  value: "Валютный фьючерс"
+              - column:
+                  name: is_hidden
+                  value: 0
+        - insert:
+            tableName: security_group
+            columns:
+              - column:
+                  name: id
+                  value: 31
+              - column:
+                  name: name
+                  value: currency_indices
+              - column:
+                  name: title
+                  value: "Валютные фиксинги"
+              - column:
+                  name: is_hidden
+                  value: 0
+        - insert:
+            tableName: security_group
+            columns:
+              - column:
+                  name: id
+                  value: 22
+              - column:
+                  name: name
+                  value: stock_mortgage
+              - column:
+                  name: title
+                  value: "Ипотечный сертификат"
+              - column:
+                  name: is_hidden
+                  value: 1
