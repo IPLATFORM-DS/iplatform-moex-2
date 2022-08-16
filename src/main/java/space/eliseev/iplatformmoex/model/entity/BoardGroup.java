@@ -16,19 +16,19 @@ public class BoardGroup {
     private Integer id;
 
     @Column(name = "trade_engine_id")
-    private Integer trade_engine_id;
+    private Integer tradeEngineId;
 
     @Column(name = "trade_engine_name")
-    private String trade_engine_name;
+    private String tradeEngineName;
 
     @Column(name = "trade_engine_title")
-    private String trade_engine_title;
+    private String tradeEngineTitle;
 
     @Column(name = "market_id")
-    private Integer market_id;
+    private Integer marketId;
 
     @Column(name = "market_name")
-    private String market_name;
+    private String marketName;
 
     @Column(name = "name",unique = true)
     private String name;
@@ -37,16 +37,16 @@ public class BoardGroup {
     private String title;
 
     @Column(name = "is_default")
-    private Integer is_default;
+    private Integer isDefault;
 
     @Column(name = "board_group_id")
-    private Integer board_group_id;
+    private Integer boardGroupId;
 
     @Column(name = "is_traded")
-    private Integer is_traded;
+    private Integer isTraded;
 
     @Column(name = "is_order_driven")
-    private Integer is_order_driven;
+    private Integer isOrderDriven;
 
     @Column(name = "category")
     private String category;
