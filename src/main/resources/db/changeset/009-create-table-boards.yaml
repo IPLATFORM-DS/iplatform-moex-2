@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: 005-create-table-boards
+      id: 009-create-table-boards
       author: sof
       changes:
         - insert:
