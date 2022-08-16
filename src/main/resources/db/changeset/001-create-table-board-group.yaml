@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: board-group
+      id: 001-create-table-board-group
       author: Temirov Karaydar
       changes:
         - createTable:
