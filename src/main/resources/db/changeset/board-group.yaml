@@ -64,11 +64,6 @@ databaseChangeLog:
                   type: INTEGER
               - column:
                   constraints:
-                    nullable: false
-                  name: id
-                  type: INTEGER
-              - column:
-                  constraints:
                     nullable: true
                   name: is_order_driven
                   type: INTEGER
