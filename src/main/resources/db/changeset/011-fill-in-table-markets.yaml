@@ -1,10 +1,10 @@
 databaseChangeLog:
   - changeSet:
-      id: 011-fill-in-table-markets
+      id: 011-fill-in-table-market
       author: sof
       changes:
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -34,7 +34,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -64,7 +64,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -94,7 +94,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -124,7 +124,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -154,7 +154,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -184,7 +184,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -214,7 +214,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -244,7 +244,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -274,7 +274,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -304,7 +304,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -334,7 +334,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -364,7 +364,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -394,7 +394,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -424,7 +424,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -454,7 +454,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -484,7 +484,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -514,7 +514,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -544,7 +544,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -574,7 +574,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -604,7 +604,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -634,7 +634,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -664,7 +664,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -694,7 +694,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -724,7 +724,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -754,7 +754,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -784,7 +784,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -814,7 +814,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -844,7 +844,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -874,7 +874,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -904,7 +904,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 1
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -934,7 +934,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 1
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -964,7 +964,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 1
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -994,7 +994,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -1024,7 +1024,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -1054,7 +1054,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -1084,7 +1084,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -1114,7 +1114,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -1144,7 +1144,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id
@@ -1174,7 +1174,7 @@ databaseChangeLog:
                   name: is_otc
                   value: 0
         - insert:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id

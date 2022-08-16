@@ -6,4 +6,4 @@ databaseChangeLog:
   - include:
       file: db/changeset/003-create-table-security-group.yaml
   - include:
-      file: db/changeset/011-fill-in-table-markets.yaml
+      file: db/changeset/011-fill-in-table-market.yaml
