@@ -33,6 +33,12 @@ public class ReferenceWithMOEX {
     @JoinColumn(name = "referenceWithMOIX_id")
     private List<SecurityCollection> securityCollections;
 
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "referenceWithMOIX_id")
+    private List<BoardGroup> boardGroups;
+
+
+
 
 
 }

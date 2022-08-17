@@ -1,21 +1,23 @@
 package space.eliseev.iplatformmoex.controller;
 
 
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.stereotype.Component;
-import space.eliseev.iplatformmoex.configuration.Config;
-import space.eliseev.iplatformmoex.model.entity.ReferenceWithMOEX;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import space.eliseev.iplatformmoex.service.ReferenceWithMOEXService;
 
-
-@Component
+@RestController
+@RequiredArgsConstructor
+@RequestMapping("/index.json")
 public class ReferenceWithMOEXController {
-    private AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
 
-    private ReferenceWithMOEXService referenceWithMOEXService = context.getBean("referenceWithMOEXService",ReferenceWithMOEXService.class);
+    private ReferenceWithMOEXService service;
 
-    ReferenceWithMOEX referenceWithMOEX = referenceWithMOEXService.getReferenceWithMOEX();
-
-
+    @GetMapping
+    public ResponseEntity getReferenceWithMOEX(){
+        return ResponseEntity.ok(service.getReferenceWithMOEX());
+    }
 
 }
