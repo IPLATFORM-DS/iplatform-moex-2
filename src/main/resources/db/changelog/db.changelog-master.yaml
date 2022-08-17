@@ -6,4 +6,7 @@ databaseChangeLog:
   - include:
       file: db/changeset/003-create-table-security-group.yaml
   - include:
+      file: db/changeset/004-create-table-security-type.yaml
+
+  - include:
       file: db/changeset/006-create-table-check-metadata.yaml
