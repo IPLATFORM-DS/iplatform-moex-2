@@ -10,3 +10,6 @@ databaseChangeLog:
 
   - include:
       file: db/changeset/005-create-table-board.yml
+
+  - include:
+      file: db/changeset/007-create-table-engine.yaml
