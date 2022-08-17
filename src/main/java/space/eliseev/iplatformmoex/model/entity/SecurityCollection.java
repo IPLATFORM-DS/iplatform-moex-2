@@ -12,7 +12,6 @@ import javax.persistence.*;
 @Entity
 @Table(name = "security_collection")
 public class SecurityCollection {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")

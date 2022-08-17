@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - include:
+      file: db/changeset/001-create-table-board-group.yaml
+  - include:
+      file: db/changeset/002-create-table-security-collection.yaml
+  - include:
+      file: db/changeset/003-create-table-security-group.yaml
+  - include:
+      file: db/changeset/004-create-table-security-type.yaml
