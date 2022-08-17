@@ -1,6 +1,5 @@
 package space.eliseev.iplatformmoex.model.entity;
 
-
 import lombok.*;
 
 import javax.persistence.*;
@@ -9,8 +8,8 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "engines")
-public class Engine {
+@Table(name = "security_group")
+public class SecurityGroup {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,7 +21,7 @@ public class Engine {
 
     @Column(name = "title")
     private String title;
+
+    @Column(name = "is_hidden")
+    private Integer isHidden;
 }
-
-
-
