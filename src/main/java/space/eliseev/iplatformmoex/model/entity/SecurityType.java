@@ -1,15 +1,15 @@
 package space.eliseev.iplatformmoex.model.entity;
 
 import lombok.*;
-
 import javax.persistence.*;
+
 
 @Getter
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "markets")
-public class Market {
+@Table(name = "security_types")
+public class SecurityType {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,18 +25,12 @@ public class Market {
     @Column(name = "trade_engine_title")
     private String tradeEngineTitle;
 
-    @Column(name = "market_name")
-    private String marketName;
+    @Column(name = "security_type_name")
+    private String securityTypeName;
 
-    @Column(name = "market_title")
-    private String marketTitle;
+    @Column(name = "security_type_title")
+    private String securityTypeTitle;
 
-    @Column(name = "market_id")
-    private Integer marketId;
-
-    @Column(name = "marketplace")
-    private String marketplace;
-
-    @Column(name = "is_otc")
-    private Integer isOtc;
+    @Column(name = "security_group_name")
+    private String securityGroupName;
 }

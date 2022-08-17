@@ -1,0 +1,74 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-table-board-group
+      author: Temirov Karaydar
+      changes:
+        - createTable:
+            tableName: board_group
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: id
+                  type: INTEGER
+              - column:
+                  constraints:
+                    nullable: false
+                  name: trade_engine_id
+                  type: INTEGER
+              - column:
+                  constraints:
+                    nullable: false
+                  name: trade_engine_name
+                  type: VARCHAR(45)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: trade_engine_title
+                  type: VARCHAR(765)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: market_id
+                  type: INTEGER
+              - column:
+                  constraints:
+                    nullable: false
+                  name: market_name
+                  type: VARCHAR(45)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: name
+                  type: VARCHAR(192)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: title
+                  type: VARCHAR(765)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: is_default
+                  type: INTEGER
+              - column:
+                  constraints:
+                    nullable: false
+                  name: board_group_id
+                  type: INTEGER
+              - column:
+                  constraints:
+                    nullable: false
+                  name: is_traded
+                  type: INTEGER
+              - column:
+                  constraints:
+                    nullable: true
+                  name: is_order_driven
+                  type: INTEGER
+              - column:
+                  constraints:
+                    nullable: false
+                  name: category
+                  type: VARCHAR(45)
