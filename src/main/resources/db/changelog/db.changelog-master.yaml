@@ -10,3 +10,5 @@ databaseChangeLog:
 
   - include:
       file: db/changeset/005-create-table-board.yml
+  - include:
+      file: db/changeset/008-create-table-market.yaml
