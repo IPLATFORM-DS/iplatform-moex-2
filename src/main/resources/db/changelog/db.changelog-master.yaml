@@ -7,3 +7,6 @@ databaseChangeLog:
       file: db/changeset/003-create-table-security-group.yaml
   - include:
       file: db/changeset/004-create-table-security-type.yaml
+
+  - include:
+      file: db/changeset/005-create-table-board.yml
