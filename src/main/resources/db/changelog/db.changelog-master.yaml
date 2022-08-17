@@ -5,3 +5,10 @@ databaseChangeLog:
       file: db/changeset/002-create-table-security-collection.yaml
   - include:
       file: db/changeset/003-create-table-security-group.yaml
+  - include:
+      file: db/changeset/004-create-table-security-type.yaml
+
+  - include:
+      file: db/changeset/005-create-table-board.yml
+  - include:
+      file: db/changeset/006-create-table-check-metadata.yaml
