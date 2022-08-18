@@ -30,10 +30,9 @@ public class CheckMetadataServiceImpl implements CheckMetadataService {
 
     private final SecurityCollectionRepository securityCollectionRepository;
 
-    private CheckMetadata check = new CheckMetadata();
-
     @Override
     public boolean checkEngine(List<Engine> engines) {
+        CheckMetadata check = new CheckMetadata();
         check.setIndex("Engine");
         check.setTimestamp(new Timestamp(System.currentTimeMillis()));
         if (engines.equals(engineRepository.findAll())) {
@@ -49,6 +48,7 @@ public class CheckMetadataServiceImpl implements CheckMetadataService {
 
     @Override
     public boolean checkMarket(List<Market> markets) {
+        CheckMetadata check = new CheckMetadata();
         check.setIndex("Market");
         check.setTimestamp(new Timestamp(System.currentTimeMillis()));
         if (markets.equals(marketRepository.findAll())) {
@@ -64,6 +64,7 @@ public class CheckMetadataServiceImpl implements CheckMetadataService {
 
     @Override
     public boolean checkBoard(List<Board> boards) {
+        CheckMetadata check = new CheckMetadata();
         check.setIndex("Board");
         check.setTimestamp(new Timestamp(System.currentTimeMillis()));
         if (boards.equals(boardRepository.findAll())) {
@@ -79,6 +80,7 @@ public class CheckMetadataServiceImpl implements CheckMetadataService {
 
     @Override
     public boolean checkBoardGroup(List<BoardGroup> boardGroups) {
+        CheckMetadata check = new CheckMetadata();
         check.setIndex("BoardGroup");
         check.setTimestamp(new Timestamp(System.currentTimeMillis()));
         if (boardGroups.equals(boardGroupRepository.findAll())) {
@@ -94,6 +96,7 @@ public class CheckMetadataServiceImpl implements CheckMetadataService {
 
     @Override
     public boolean checkDuration(List<Duration> durations) {
+        CheckMetadata check = new CheckMetadata();
         check.setIndex("Duration");
         check.setTimestamp(new Timestamp(System.currentTimeMillis()));
         if (durations.equals(durationRepository.findAll())) {
@@ -109,6 +112,7 @@ public class CheckMetadataServiceImpl implements CheckMetadataService {
 
     @Override
     public boolean checkSecurityType(List<SecurityType> securityTypes) {
+        CheckMetadata check = new CheckMetadata();
         check.setIndex("SecurityType");
         check.setTimestamp(new Timestamp(System.currentTimeMillis()));
         if (securityTypes.equals(securityTypeRepository.findAll())) {
@@ -124,6 +128,7 @@ public class CheckMetadataServiceImpl implements CheckMetadataService {
 
     @Override
     public boolean checkSecurityGroup(List<SecurityGroup> securityGroups) {
+        CheckMetadata check = new CheckMetadata();
         check.setIndex("SecurityGroup");
         check.setTimestamp(new Timestamp(System.currentTimeMillis()));
         if(securityGroups.equals(securityGroupRepository.findAll())) {
@@ -139,6 +144,7 @@ public class CheckMetadataServiceImpl implements CheckMetadataService {
 
     @Override
     public boolean checkSecurityCollection(List<SecurityCollection> securityCollections) {
+        CheckMetadata check = new CheckMetadata();
         check.setIndex("SecurityCollection");
         check.setTimestamp(new Timestamp(System.currentTimeMillis()));
         if (securityCollections.equals(securityCollectionRepository.findAll())) {
