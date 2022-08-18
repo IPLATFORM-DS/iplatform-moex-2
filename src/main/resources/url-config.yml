@@ -1,0 +1,17 @@
+url:
+  #  ISS Queries
+
+  securities: https://iss.moex.com/iss/securities.json
+  #  Список бумаг торгуемых на московской бирже.
+
+  security: https://iss.moex.com/iss/securities/[security].json
+  #  Получить спецификацию инструмента. Например: https://iss.moex.com/iss/securities/IMOEX.xml
+
+  indices: https://iss.moex.com/iss/securities/[security]/indices.json
+  #  Список индексов в которые входит бумага
+
+  aggregates: https://iss.moex.com/iss/securities/[security]/aggregates.json
+  #  Агрегированные итоги торгов за дату по рынкам
+
+  secstats: https://iss.moex.com/iss/engines/[engine]/markets/[market]/secstats.json
+  #  Промежуточные "Итоги дня". Только для фондового рынка

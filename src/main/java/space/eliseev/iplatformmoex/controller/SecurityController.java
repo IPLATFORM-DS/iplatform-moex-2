@@ -13,8 +13,8 @@ public class SecurityController {
     private final SecurityService securityService;
 
     @GetMapping
-    public Object getSecurities(@RequestParam(name = "engine", required = false) String e,
-                                @RequestParam(name = "market", required = false) String m,
+    public Object getSecurities(@RequestParam(name = "engine", required = false) Engine engine,
+                                @RequestParam(name = "market", required = false) Market market,
                                 @RequestParam(name = "q", required = false) String q,
                                 @RequestParam(name = "lang", required = false) String lang,
                                 @RequestParam(name = "is_trading", required = false) String isTrading,
@@ -22,8 +22,6 @@ public class SecurityController {
                                 @RequestParam(name = "group_by_filter", required = false) String groupByFilter,
                                 @RequestParam(name = "limit", required = false) String limit,
                                 @RequestParam(name = "start", required = false) Integer start) {
-        Engine engine = (e == null) ? null : Engine.valueOf(e.toUpperCase());
-        Market market = (m == null) ? null : Market.valueOf(m.toUpperCase());
         return securityService.getSecurities(engine, market, q, lang, isTrading, groupBy, groupByFilter, limit, start);
     }
 
