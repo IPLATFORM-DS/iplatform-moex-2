@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: 007-create-table-engine
+      author: Auezov Kuanysh
+      changes:
+        - createTable:
+            tableName: engine
+            columns:
+              - column:
+                  name: id
+                  type: INTEGER
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: engine_pk
+              - column:
+                  name: name
+                  type: VARCHAR(45)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: title
+                  type: VARCHAR(765)
+                  constraints:
+                    nullable: false
