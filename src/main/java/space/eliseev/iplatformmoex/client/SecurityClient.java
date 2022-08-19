@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @FeignClient(value = "moex-iss", url = "https://iss.moex.com/iss")
-public interface SecuritiesClient {
+public interface SecurityClient {
 
     @GetMapping("/securities.json")
     Object getSecurities(@RequestParam(required = false) String q,
