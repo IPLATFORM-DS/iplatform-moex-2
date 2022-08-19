@@ -9,8 +9,6 @@ import space.eliseev.iplatformmoex.model.enumeration.Engine;
 import space.eliseev.iplatformmoex.model.enumeration.Market;
 import space.eliseev.iplatformmoex.services.SecurityService;
 
-import java.util.Locale;
-
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/securities")
