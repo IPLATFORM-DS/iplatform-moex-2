@@ -11,9 +11,10 @@ databaseChangeLog:
   - include:
       file: db/changeset/005-create-table-board.yml
 
-
   - include:
       file: db/changeset/006-create-table-check-metadata.yaml
       
   - include:
       file: db/changeset/007-create-table-engine.yaml
+  - include:
+      file: db/changeset/008-create-table-market.yaml
