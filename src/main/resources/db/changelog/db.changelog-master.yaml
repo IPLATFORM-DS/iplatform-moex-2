@@ -6,4 +6,4 @@ databaseChangeLog:
   - include:
       file: db/changeset/003-create-table-security-group.yaml
   - include:
-      file: db/changeset/009-add-in-table-security-collection.yaml
+      file: db/changeset/012-fill-in-table-security-collection.yaml
