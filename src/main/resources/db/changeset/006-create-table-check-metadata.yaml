@@ -4,12 +4,12 @@ databaseChangeLog:
       author: "Sof"
       changes:
         - createTable:
+            tableName: check_metadata
             columns:
               - column:
                   constraints:
                     nullable: false
                     primaryKey: true
-                    primaryKeyName: check_metadata_id
                   name: id
                   type: BIGINT
               - column:
@@ -30,4 +30,3 @@ databaseChangeLog:
                   name: is_valid
                   remarks: Результат проверки
                   type: BOOLEAN
-            tableName: check_metadata

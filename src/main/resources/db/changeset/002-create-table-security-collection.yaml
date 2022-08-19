@@ -4,13 +4,12 @@ databaseChangeLog:
       author: dmitriy
       changes:
         - createTable:
-            tableName: security_collection
+            tableName: security_collections
             columns:
               - column:
                   constraints:
                     nullable: false
                     primaryKey: true
-                    primaryKeyName: security_collection_pkey
                   name: id
                   type: INTEGER
               - column:
@@ -20,6 +19,7 @@ databaseChangeLog:
                   name: title
                   type: VARCHAR(765)
               - column:
-                  nullable: false
+                  constraints:
+                    nullable: false
                   name: security_group_id
                   type: INTEGER

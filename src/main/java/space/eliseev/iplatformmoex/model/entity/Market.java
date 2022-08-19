@@ -37,6 +37,6 @@ public class Market {
     private String marketplace;
 
     @Column(name = "is_otc")
-    private boolean isOtc;
+    private Integer isOtc;
 }
 

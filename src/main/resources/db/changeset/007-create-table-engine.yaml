@@ -4,7 +4,7 @@ databaseChangeLog:
       author: Auezov Kuanysh
       changes:
         - createTable:
-            tableName: engine
+            tableName: engines
             columns:
               - column:
                   name: id
@@ -12,7 +12,6 @@ databaseChangeLog:
                   constraints:
                     nullable: false
                     primaryKey: true
-                    primaryKeyName: engine_pk
               - column:
                   name: name
                   type: VARCHAR(45)

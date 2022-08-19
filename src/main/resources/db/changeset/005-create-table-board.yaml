@@ -4,53 +4,52 @@ databaseChangeLog:
       author: "Sof"
       changes:
         - createTable:
+            tableName: boards
             columns:
               - column:
                   constraints:
                     nullable: false
                     primaryKey: true
-                    primaryKeyName: board_id
                   name: id
-                  type: integer
+                  type: INTEGER
               - column:
                   constraints:
                     nullable: false
                   name: board_group_id
-                  type: integer
+                  type: INTEGER
               - column:
                   constraints:
                     nullable: false
                   name: engine_id
-                  type: integer
+                  type: INTEGER
               - column:
                   constraints:
                     nullable: false
                   name: market_id
-                  type: integer
+                  type: INTEGER
               - column:
                   constraints:
                     nullable: false
                   name: boardid
-                  type: varchar(12)
+                  type: VARCHAR(12)
               - column:
                   constraints:
                     nullable: false
                   name: board_title
-                  type: varchar(318)
+                  type: VARCHAR(318)
               - column:
                   constraints:
                     nullable: false
                   name: is_traded
-                  type: smallint
+                  type: INTEGER
               - column:
                   constraints:
                     nullable: false
                   name: has_candles
-                  type: smallint
+                  type: INTEGER
               - column:
                   constraints:
                     nullable: false
                   name: is_primary
-                  type: smallint
-            tableName: board
+                  type: INTEGER
 

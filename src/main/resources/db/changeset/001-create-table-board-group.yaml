@@ -4,7 +4,7 @@ databaseChangeLog:
       author: Temirov Karaydar
       changes:
         - createTable:
-            tableName: board_group
+            tableName: board_groups
             columns:
               - column:
                   constraints:
