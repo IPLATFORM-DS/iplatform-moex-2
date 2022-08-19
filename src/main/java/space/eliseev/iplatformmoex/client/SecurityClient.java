@@ -2,6 +2,7 @@ package space.eliseev.iplatformmoex.client;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import space.eliseev.iplatformmoex.model.enumeration.Engine;
 import space.eliseev.iplatformmoex.model.enumeration.Market;
@@ -20,7 +21,8 @@ public interface SecurityClient {
                          @RequestParam(name = "limit", required = false) String limit,
                          @RequestParam(name = "start", required = false) Integer start);
 
-    @GetMapping("/aggregates.json")
-    Object getSecurityAggregates(@RequestParam(required = false) String lang,
+    @GetMapping("/{security}aggregates.json")
+    Object getSecurityAggregates(@PathVariable("security") String security,
+                                 @RequestParam(required = false) String lang,
                                  @RequestParam(required = false) String date);
 }
