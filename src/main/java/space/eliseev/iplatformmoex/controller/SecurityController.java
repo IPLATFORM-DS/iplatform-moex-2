@@ -37,7 +37,7 @@ public class SecurityController {
                                 @RequestParam(required = false) String market,
                                 @RequestParam(required = false) String group_by,
                                 @RequestParam(required = false) String group_by_filter,
-                                @RequestParam(required = false) Integer limit,
+                                @RequestParam(required = false) String limit,
                                 @RequestParam(required = false) Integer start) {
         return securityService.getSecurities(q, lang, engine, is_trading, market, group_by, group_by_filter, limit, start);
     }
@@ -45,6 +45,6 @@ public class SecurityController {
     @GetMapping("/aggregates")
     public Object getSecurityAggregates(@RequestParam(required = false) String lang,
                                         @RequestParam(required = false) String date) {
-        return null;
+        return securityService.getSecurityAggregates(lang, date);
     }
 }
