@@ -19,4 +19,8 @@ public interface SecurityClient {
                          @RequestParam(name = "group_by_filter", required = false) String groupByFilter,
                          @RequestParam(name = "limit", required = false) String limit,
                          @RequestParam(name = "start", required = false) Integer start);
+
+    @GetMapping("/aggregates.json")
+    Object getSecurityAggregates(@RequestParam(required = false) String lang,
+                                 @RequestParam(required = false) String date);
 }

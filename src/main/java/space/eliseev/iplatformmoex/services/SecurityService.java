@@ -14,4 +14,8 @@ public class SecurityService {
     public Object getSecurities(Engine engine, Market market, String q, String lang, String isTrading, String groupBy, String groupByFilter, String limit, Integer start) {
         return securityClient.getSecurities(engine, market, q, lang, isTrading, groupBy, groupByFilter, limit, start);
     }
+
+    public Object getSecurityAggregates(String lang, String date) {
+        return securityClient.getSecurityAggregates(lang, date);
+    }
 }
