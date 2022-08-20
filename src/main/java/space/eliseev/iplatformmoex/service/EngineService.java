@@ -13,5 +13,5 @@ import java.util.List;
 public interface EngineService {
 
     @GetMapping(value = "/engines?iss.meta=off&iss.only=engines", produces= MediaType.APPLICATION_JSON_VALUE)
-    List<Object> getEngines(@RequestParam(value = "lang", required = false)String lang);
+    Object getEngines(@RequestParam(value = "lang", required = false)String lang);
 }
