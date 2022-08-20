@@ -4,7 +4,7 @@ databaseChangeLog:
       author: "Sof"
       changes:
         - createTable:
-            tableName: boards
+            tableName: board
             columns:
               - column:
                   constraints:

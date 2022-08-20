@@ -4,7 +4,7 @@ databaseChangeLog:
       author: Auezov Kuanysh
       changes:
         - createTable:
-            tableName: durations
+            tableName: duration
             columns:
               - column:
                   constraints:

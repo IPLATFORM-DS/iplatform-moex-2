@@ -4,7 +4,7 @@ databaseChangeLog:
       author: Auezov Kuanysh
       changes:
         - createTable:
-            tableName: markets
+            tableName: market
             columns:
               - column:
                   name: id

@@ -10,7 +10,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "security_collections")
+@Table(name = "security_collection")
 public class SecurityCollection {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

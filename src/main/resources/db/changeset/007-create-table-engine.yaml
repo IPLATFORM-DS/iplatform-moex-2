@@ -4,7 +4,7 @@ databaseChangeLog:
       author: Auezov Kuanysh
       changes:
         - createTable:
-            tableName: engines
+            tableName: engine
             columns:
               - column:
                   name: id

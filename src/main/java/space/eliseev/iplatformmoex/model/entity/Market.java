@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "markets")
+@Table(name = "market")
 public class Market {
 
     @Id

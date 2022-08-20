@@ -4,7 +4,7 @@ databaseChangeLog:
       author: dmitriy
       changes:
         - createTable:
-            tableName: security_types
+            tableName: security_type
             columns:
               - column:
                   constraints:
