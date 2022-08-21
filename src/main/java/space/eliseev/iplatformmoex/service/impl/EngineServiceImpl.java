@@ -23,7 +23,7 @@ public class EngineServiceImpl implements EngineService {
         LinkedHashMap<String, LinkedHashMap<String, LinkedHashMap<String, ArrayList<LinkedHashMap<String, String>>>>>
                 data = (LinkedHashMap<String, LinkedHashMap<String, LinkedHashMap<String,
                 ArrayList<LinkedHashMap<String, String>>>>>) engineClient.getEngines(lang);
-        List<Engine> engins = data.get("data").get("rows").get("row").stream().map(o -> {
+        List<Engine> engines = data.get("data").get("rows").get("row").stream().map(o -> {
             Integer id = Integer.parseInt(o.get("id"));
             String name = o.get("name");
             String title = o.get("title");
@@ -34,6 +34,6 @@ public class EngineServiceImpl implements EngineService {
             return engine;
 
         }).collect(Collectors.toList());
-        return engins;
+        return engines;
     }
 }
