@@ -1,14 +1,17 @@
 package space.eliseev.iplatformmoex.service;
 
+import org.springframework.lang.Nullable;
 
-import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
-@FeignClient(value = "engine",url="https://iss.moex.com/iss/")
+/**
+ * @author <a href="mailto:a.s.eliseev@yandex.ru">Aleksandr Eliseev</a>
+ */
 public interface EngineService {
 
-    @GetMapping(value = "/engines?iss.meta=off&iss.only=engines", produces= MediaType.APPLICATION_JSON_VALUE)
-    Object getEngines(@RequestParam(value = "lang", required = false)String lang);
+    /**
+     * Получить доступные торговые системы
+     *
+     * @param lang Язык результата: ru или en
+     * @return список доступных торговых систем
+     */
+    Object getEngines(@Nullable String lang);
 }
