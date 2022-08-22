@@ -2,14 +2,18 @@ databaseChangeLog:
   - include:
       file: db/changeset/001-create-table-board-group.yaml
   - include:
-      file: db/changeset/002-create-table-security-collection.yaml
-  - include:
       file: db/changeset/003-create-table-security-group.yaml
   - include:
-      file: db/changeset/004-create-table-security-type.yaml
-
-  - include:
-      file: db/changeset/005-create-table-board.yml
+      file: db/changeset/005-create-table-board.yaml
   - include:
       file: db/changeset/006-create-table-check-metadata.yaml
-  -include: db/changeset/014-fill-in-table-duration.yaml
+  - include:
+      file: db/changeset/007-create-table-engine.yaml
+  - include:
+      file: db/changeset/008-create-table-market.yaml
+  - include:
+      file: db/changeset/004-create-table-security-type.yaml
+  - include:
+      file: db/changeset/002-create-table-security-collection.yaml
+  - include:
+      file: db/changeset/009-create-table-duration.yamlgit
