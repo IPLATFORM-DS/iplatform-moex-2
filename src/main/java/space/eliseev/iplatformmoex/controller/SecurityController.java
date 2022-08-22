@@ -1,10 +1,7 @@
 package space.eliseev.iplatformmoex.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import space.eliseev.iplatformmoex.model.enumeration.Engine;
 import space.eliseev.iplatformmoex.model.enumeration.Market;
 import space.eliseev.iplatformmoex.services.SecurityService;
@@ -28,4 +25,10 @@ public class SecurityController {
         return securityService.getSecurities(engine, market, q, lang, isTrading, groupBy, groupByFilter, limit, start);
     }
 
+    @GetMapping("/{security}/aggregates")
+    public Object getSecurityAggregates(@PathVariable("security") String security,
+                                        @RequestParam(required = false) String lang,
+                                        @RequestParam(required = false) String date) {
+        return securityService.getSecurityAggregates(security, date, lang);
+    }
 }
