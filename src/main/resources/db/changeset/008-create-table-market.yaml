@@ -1,0 +1,73 @@
+databaseChangeLog:
+  - changeSet:
+      id: 008-create-table-market
+      author: Auezov Kuanysh
+      changes:
+        - createTable:
+            tableName: market
+            columns:
+              - column:
+                  name: id
+                  type: INTEGER
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: market_pk
+              - column:
+                  name: trade_engine
+                  type: INTEGER
+                  constraints:
+                    nullable: false
+              - column:
+                  name: trade_engine_name
+                  type: VARCHAR(45)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: trade_engine_title
+                  type: VARCHAR(765)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: market_name
+                  type: VARCHAR(45)
+                  constraints: 
+                    nullable: false
+              - column:
+                  name: market_title
+                  type: VARCHAR(765)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: market_id
+                  type: INTEGER
+                  constraints:
+                    nullable: false
+              - column:
+                  name: marketplace
+                  type: VARCHAR(48)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: is_otc
+                  type: INTEGER
+                  constraints:
+                    nullable: false
+              - column:
+                  name: has_history_files
+                  type: INTEGER
+                  constraints:
+                    nullable: false
+              - column:
+                  name: has_history_trades_files
+                  type: INTEGER
+              - column: 
+                  name: has_trades
+                  type: INTEGER
+                  constraints:
+                    nullable: false
+              - column:
+                  name: has_history
+                  type: INTEGER
+                  constraints:
+                    nullable: false
