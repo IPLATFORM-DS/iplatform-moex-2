@@ -41,16 +41,16 @@ databaseChangeLog:
                   constraints:
                     nullable: false
                   name: is_traded
-                  type: smallint
+                  type: INTEGER
               - column:
                   constraints:
                     nullable: false
                   name: has_candles
-                  type: smallint
+                  type: INTEGER
               - column:
                   constraints:
                     nullable: false
                   name: is_primary
-                  type: smallint
+                  type: INTEGER
             tableName: board
 

@@ -14,7 +14,7 @@ databaseChangeLog:
                     primaryKey: true
                     primaryKeyName: market_pk
               - column:
-                  name: trade_engine
+                  name: trade_engine_id
                   type: INTEGER
                   constraints:
                     nullable: false
