@@ -16,4 +16,7 @@ databaseChangeLog:
   - include:
       file: db/changeset/002-create-table-security-collection.yaml
   - include:
-      file: db/changeset/009-create-table-duration.yamlgit
+      file: db/changeset/009-create-table-duration.yaml
+
+  - include:
+      file: db/changeset/012-fill-in-table-security-collection.yaml
