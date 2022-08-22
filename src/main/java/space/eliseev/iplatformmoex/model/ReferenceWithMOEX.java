@@ -1,5 +1,6 @@
 package space.eliseev.iplatformmoex.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -10,6 +11,7 @@ import java.util.List;
 @NoArgsConstructor
 @Getter
 @Setter
+@AllArgsConstructor
 public class ReferenceWithMOEX {
 
     private List<Duration> durations;
