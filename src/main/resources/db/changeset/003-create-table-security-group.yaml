@@ -1,16 +1,15 @@
 databaseChangeLog:
   - changeSet:
-      - id: 003-create-table-security-group
-        author: dmitriy
-        changes:
-          - createTable:
-            tableName: security_group
+      id: 003-create-table-security-group
+      author: Dmitriy
+      changes:
+        - createTable:
+            tableName: security-group
             columns:
               - column:
                   constraints:
                     nullable: false
                     primaryKey: true
-                    primaryKeyName: security_group_pkey
                   name: id
                   type: INTEGER
               - column:
