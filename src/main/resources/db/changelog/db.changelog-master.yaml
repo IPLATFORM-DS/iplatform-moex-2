@@ -15,3 +15,5 @@ databaseChangeLog:
       file: db/changeset/004-create-table-security-type.yaml
   - include:
       file: db/changeset/002-create-table-security-collection.yaml
+  - include:
+      file: db/changeset/009-create-table-duration.yaml
