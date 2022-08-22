@@ -1,25 +1,25 @@
 databaseChangeLog:
   - changeSet:
-      id: 002-create-table-security-collection
-      author: Dmitriy
+      id: 007-create-table-engine
+      author: Auezov Kuanysh
       changes:
         - createTable:
-            tableName: security-collection
+            tableName: engine
             columns:
               - column:
+                  name: id
+                  type: INTEGER
                   constraints:
                     nullable: false
                     primaryKey: true
-                  name: id
-                  type: INTEGER
+                    primaryKeyName: engine_pk
               - column:
                   name: name
-                  type: VARCHAR(96)
+                  type: VARCHAR(45)
+                  constraints:
+                    nullable: false
               - column:
                   name: title
                   type: VARCHAR(765)
-              - column:
                   constraints:
                     nullable: false
-                  name: security_group_id
-                  type: INTEGER
