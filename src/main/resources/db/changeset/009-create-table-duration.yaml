@@ -7,12 +7,16 @@ databaseChangeLog:
           - tableName: duration
             columns:
               - column:
-                  name: interval
+                  name: id
                   type: INTEGER
                   constraints:
                     nullable: false
                     primaryKey: true
-                    primaryKeyName: duration_pkey
+              - column:
+                  name: interval
+                  type: INTEGER
+                  constraints:
+                    nullable: false
               - column:
                   name: duration
                   type: INTEGER
