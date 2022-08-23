@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: 012-fill-in-table-security-type
+      id: 016-fill-in-table-security-type
       author: sof
       changes:
         - insert:
