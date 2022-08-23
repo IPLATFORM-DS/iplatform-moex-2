@@ -14,9 +14,6 @@ import javax.persistence.*;
 public class Duration {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Integer id;
-
     @Column(name = "interval")
     private Integer interval;
 

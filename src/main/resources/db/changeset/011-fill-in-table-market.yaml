@@ -33,6 +33,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 0
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -63,6 +75,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -93,6 +117,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -123,6 +159,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -153,6 +201,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -183,6 +243,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 0
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 0
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -213,6 +285,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -243,6 +327,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 0
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -273,6 +369,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -303,6 +411,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -333,6 +453,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -363,6 +495,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -393,6 +537,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -423,6 +579,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 0
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -453,6 +621,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -482,6 +662,18 @@ databaseChangeLog:
                   value: null
               - column:
                   name: is_otc
+                  value: 0
+              - column:
+                  name: has_history_files
+                  value: 0
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
                   value: 0
         - insert:
             tableName: market
@@ -513,6 +705,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -543,6 +747,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -573,6 +789,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 0
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -603,6 +831,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -633,6 +873,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -663,6 +915,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -693,6 +957,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -722,6 +998,18 @@ databaseChangeLog:
                   value: null
               - column:
                   name: is_otc
+                  value: 0
+              - column:
+                  name: has_history_files
+                  value: 0
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 0
+              - column:
+                  name: has_history
                   value: 0
         - insert:
             tableName: market
@@ -753,6 +1041,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 0
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 0
+              - column:
+                  name: has_history
+                  value: 0
         - insert:
             tableName: market
             columns:
@@ -783,6 +1083,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -813,6 +1125,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -843,6 +1167,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -873,6 +1209,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -903,6 +1251,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 1
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -932,6 +1292,18 @@ databaseChangeLog:
                   value: null
               - column:
                   name: is_otc
+                  value: 1
+              - column:
+                  name: has_history_files
+                  value: 0
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
                   value: 1
         - insert:
             tableName: market
@@ -963,6 +1335,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 1
+              - column:
+                  name: has_history_files
+                  value: 0
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -993,6 +1377,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -1023,6 +1419,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -1053,6 +1461,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -1083,6 +1503,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -1112,6 +1544,18 @@ databaseChangeLog:
                   value: null
               - column:
                   name: is_otc
+                  value: 0
+              - column:
+                  name: has_history_files
+                  value: 0
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 0
+              - column:
+                  name: has_history
                   value: 0
         - insert:
             tableName: market
@@ -1143,6 +1587,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 0
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 0
+              - column:
+                  name: has_history
+                  value: 0
         - insert:
             tableName: market
             columns:
@@ -1173,6 +1629,18 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -1203,7 +1671,15 @@ databaseChangeLog:
               - column:
                   name: is_otc
                   value: 0
-
-
-
-
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1

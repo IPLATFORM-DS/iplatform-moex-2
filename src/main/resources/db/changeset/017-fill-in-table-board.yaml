@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: 020-fill-in-table-board
+      id: 017-fill-in-table-board
       author: sof
       changes:
         - insert:

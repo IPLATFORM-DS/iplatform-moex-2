@@ -7,16 +7,11 @@ databaseChangeLog:
           - tableName: duration
             columns:
               - column:
-                  name: id
-                  type: INTEGER
-                  constraints:
-                    nullable: false
-                    primaryKey: true
-              - column:
                   name: interval
                   type: INTEGER
                   constraints:
                     nullable: false
+                    primaryKey: true
               - column:
                   name: duration
                   type: INTEGER
@@ -25,8 +20,6 @@ databaseChangeLog:
               - column:
                   name: days
                   type: INTEGER
-                  constraints:
-                    nullable: false
               - column:
                   name: title
                   type: VARCHAR(765)

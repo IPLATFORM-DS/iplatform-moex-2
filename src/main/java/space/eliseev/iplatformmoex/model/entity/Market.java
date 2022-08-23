@@ -38,5 +38,19 @@ public class Market {
 
     @Column(name = "is_otc")
     private Integer isOtc;
+
+    @Column(name = "has_history_files")
+    private Integer hasHistoryFiles;
+
+    @Column(name = "has_history_trades_files")
+    private Integer hasHistoryTradesFiles;
+
+    @Column(name = "has_trades")
+    private Integer hasTrades;
+
+    @Column(name = "has_history")
+    private Integer hasHistory;
+
+
 }
 
