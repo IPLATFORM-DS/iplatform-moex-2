@@ -1,11 +1,18 @@
 package space.eliseev.iplatformmoex.model.enumeration;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@Getter
+@AllArgsConstructor
 public enum Duration {
-    MINUTE,
-    TEN_MINUTES,
-    HOUR,
-    DAY,
-    WEEK,
-    MONTH,
-    QUARTER
+    MINUTE("minute"),
+    TEN_MINUTES("ten_minutes"),
+    HOUR("hour"),
+    DAY("day"),
+    WEEK("week"),
+    MONTH("month"),
+    QUARTER("quarter");
+
+    private final String name;
 }
