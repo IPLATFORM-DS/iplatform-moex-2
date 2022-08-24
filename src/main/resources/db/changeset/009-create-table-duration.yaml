@@ -1,22 +1,17 @@
 databaseChangeLog:
   - changeSet:
       id: 009-create-table-duration
-      author: Dmitriy
+      author: Auezov Kuanysh
       changes:
-        - createTable:
-            tableName: duration
+        createTable:
+          - tableName: duration
             columns:
-              - column:
-                  name: id
-                  type: INTEGER
-                  constraints:
-                    nullable: false
-                    primaryKey: true
               - column:
                   name: interval
                   type: INTEGER
                   constraints:
                     nullable: false
+                    primaryKey: true
               - column:
                   name: duration
                   type: INTEGER

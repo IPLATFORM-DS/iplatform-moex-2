@@ -46,8 +46,6 @@ databaseChangeLog:
               - column:
                   name: marketplace
                   type: VARCHAR(48)
-                  constraints:
-                    nullable: false
               - column:
                   name: is_otc
                   type: INTEGER

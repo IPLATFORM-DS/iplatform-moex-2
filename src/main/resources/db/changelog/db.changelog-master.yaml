@@ -1,4 +1,6 @@
 databaseChangeLog:
+
+# Creating entity tables
   - include:
       file: db/changeset/001-create-table-board-group.yaml
   - include:
@@ -17,3 +19,21 @@ databaseChangeLog:
       file: db/changeset/002-create-table-security-collection.yaml
   - include:
       file: db/changeset/009-create-table-duration.yaml
+
+# Filling entity tables
+  - include:
+      file: db/changeset/010-fill-in-table-engine.yaml
+  - include:
+      file: db/changeset/011-fill-in-table-market.yaml
+  - include:
+      file: db/changeset/012-fill-in-table-security-collection.yaml
+  - include:
+      file: db/changeset/013-fill-in-table-security-group.yaml
+  - include:
+      file: db/changeset/014-fill-in-table-duration.yaml
+  - include:
+      file: db/changeset/015-fill-in-table-board-group.yaml
+  - include:
+      file: db/changeset/016-fill-in-table-security-type.yaml
+  - include:
+      file: db/changeset/017-fill-in-table-board.yaml
