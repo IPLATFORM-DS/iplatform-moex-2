@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import space.eliseev.iplatformmoex.model.enumeration.Engine;
 import space.eliseev.iplatformmoex.model.enumeration.Market;
-import space.eliseev.iplatformmoex.services.SecurityService;
+import space.eliseev.iplatformmoex.service.SecurityService;
 
 @RestController
 @RequiredArgsConstructor
