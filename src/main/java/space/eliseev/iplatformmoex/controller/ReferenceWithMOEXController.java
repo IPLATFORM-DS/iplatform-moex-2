@@ -23,7 +23,7 @@ public class ReferenceWithMOEXController {
 
     @GetMapping
     public ResponseEntity getReferenceWithMOEX(){
-        ReferenceWithMOEX reference = service.getReferenceWithMOEX();
+        Object reference = service.getReferenceWithMOEX();
         return new ResponseEntity(reference, HttpStatus.OK);
     }
 

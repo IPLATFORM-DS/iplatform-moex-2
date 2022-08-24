@@ -9,6 +9,6 @@ import space.eliseev.iplatformmoex.model.ReferenceWithMOEX;
 @FeignClient(value = "MOEX-api", url = "https://iss.moex.com/iss/")
 public interface ReferenceWithMOEXService {
 
-    @RequestMapping(method = RequestMethod.GET, value = "/index.json")
-    ReferenceWithMOEX getReferenceWithMOEX();
+    @RequestMapping(method = RequestMethod.GET, value = "/index.json?iss.json=extended")
+    Object getReferenceWithMOEX();
 }

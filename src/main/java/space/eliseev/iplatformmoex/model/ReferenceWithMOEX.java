@@ -14,6 +14,14 @@ import java.util.List;
 @AllArgsConstructor
 public class ReferenceWithMOEX {
 
+    private List<Engine> engines;
+
+    private List<Market> markets;
+
+    private List<Board> boards;
+
+    private List<BoardGroup> boardGroups;
+
     private List<Duration> durations;
 
     private List<SecurityType> securityTypes;
@@ -21,19 +29,5 @@ public class ReferenceWithMOEX {
     private List<SecurityGroup> securityGroups;
 
     private List<SecurityCollection> securityCollections;
-
-    private List<BoardGroup> boardGroups;
-
-    private List<Engine> engines;
-
-    private List<Market> markets;
-
-    private List<Board> boards;
-
-
-
-
-
-
 
 }
