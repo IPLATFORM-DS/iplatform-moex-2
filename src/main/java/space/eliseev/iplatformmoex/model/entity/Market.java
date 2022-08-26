@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "markets")
+@Table(name = "market")
 public class Market {
 
     @Id
@@ -37,6 +37,20 @@ public class Market {
     private String marketplace;
 
     @Column(name = "is_otc")
-    private boolean isOtc;
+    private Integer isOtc;
+
+    @Column(name = "has_history_files")
+    private Integer hasHistoryFiles;
+
+    @Column(name = "has_history_trades_files")
+    private Integer hasHistoryTradesFiles;
+
+    @Column(name = "has_trades")
+    private Integer hasTrades;
+
+    @Column(name = "has_history")
+    private Integer hasHistory;
+
+
 }
 

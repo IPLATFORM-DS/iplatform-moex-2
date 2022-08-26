@@ -5,6 +5,15 @@ import org.springframework.web.bind.annotation.*;
 import space.eliseev.iplatformmoex.model.enumeration.Engine;
 import space.eliseev.iplatformmoex.model.enumeration.Market;
 import space.eliseev.iplatformmoex.services.SecurityService;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+import space.eliseev.iplatformmoex.model.enumeration.Engine;
+import space.eliseev.iplatformmoex.model.enumeration.Market;
+import space.eliseev.iplatformmoex.service.SecurityService;
+import org.springframework.web.bind.annotation.PathVariable;
+import space.eliseev.iplatformmoex.service.SecurityIndicesService;
 
 @RestController
 @RequiredArgsConstructor
@@ -15,6 +24,11 @@ public class SecurityController {
     @GetMapping
     public Object getSecurities(@RequestParam(name = "engine", required = false) String e,
                                 @RequestParam(name = "market", required = false) String m,
+    private final SecurityIndicesService securityIndicesService;
+
+    @GetMapping
+    public Object getSecurities(@RequestParam(name = "engine", required = false) Engine engine,
+                                @RequestParam(name = "market", required = false) Market market,
                                 @RequestParam(name = "q", required = false) String q,
                                 @RequestParam(name = "lang", required = false) String lang,
                                 @RequestParam(name = "is_trading", required = false) String isTrading,
@@ -33,4 +47,12 @@ public class SecurityController {
                                         @RequestParam(required = false) String date) {
         return securityService.getSecurityAggregates(security, date, lang);
     }
+        return securityService.getSecurities(engine, market, q, lang, isTrading, groupBy, groupByFilter, limit, start);
+    }
+
+    @GetMapping("/{security}")
+    Object getSecurityIndices(@PathVariable String security) {
+        return securityIndicesService.getSecurityIndices(security);
+    }
+
 }

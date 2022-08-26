@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: 009-create-table-duration
+      author: Auezov Kuanysh
+      changes:
+        createTable:
+          - tableName: duration
+            columns:
+              - column:
+                  name: interval
+                  type: INTEGER
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+              - column:
+                  name: duration
+                  type: INTEGER
+                  constraints:
+                    nullable: false
+              - column:
+                  name: days
+                  type: INTEGER
+              - column:
+                  name: title
+                  type: VARCHAR(765)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: hint
+                  type: VARCHAR(765)
+                  constraints:
+                    nullable: false
