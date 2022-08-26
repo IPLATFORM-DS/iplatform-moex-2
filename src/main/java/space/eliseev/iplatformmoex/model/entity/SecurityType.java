@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "security_types")
+@Table(name = "security_type")
 public class SecurityType {
 
     @Id
