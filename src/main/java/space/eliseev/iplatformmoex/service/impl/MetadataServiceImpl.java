@@ -1,9 +1,10 @@
-package space.eliseev.iplatformmoex.service;
+package space.eliseev.iplatformmoex.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import space.eliseev.iplatformmoex.model.entity.*;
 import space.eliseev.iplatformmoex.repository.*;
+import space.eliseev.iplatformmoex.service.MetadataService;
 
 import java.util.List;
 
