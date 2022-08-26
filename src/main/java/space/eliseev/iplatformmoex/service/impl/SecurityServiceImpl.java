@@ -12,7 +12,9 @@ import space.eliseev.iplatformmoex.service.SecurityService;
 public class SecurityServiceImpl implements SecurityService {
     private final SecurityClient securityClient;
 
-    public Object getSecurities(Engine engine, Market market, String q, String lang, String isTrading, String groupBy, String groupByFilter, String limit, Integer start) {
-        return securityClient.getSecurities(engine.getName(), market.getName(), q, lang, isTrading, groupBy, groupByFilter, limit, start);
+    public Object getSecurities(Engine e, Market m, String q, String lang, String isTrading, String groupBy, String groupByFilter, String limit, Integer start) {
+        String engine = (e == null) ? null : e.getName();
+        String market = (m == null) ? null : m.getName();
+        return securityClient.getSecurities(engine, market, q, lang, isTrading, groupBy, groupByFilter, limit, start);
     }
 }
