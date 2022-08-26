@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import space.eliseev.iplatformmoex.model.entity.Engine;
 
 import java.util.List;
 
@@ -15,6 +16,6 @@ import java.util.List;
 public class EngineJsonDto {
 
     public Charsetinfo charsetinfo;
-    public List<EngineDto> engines;
+    public List<Engine> engines;
 
 }

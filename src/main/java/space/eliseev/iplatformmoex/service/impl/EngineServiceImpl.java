@@ -2,8 +2,6 @@ package space.eliseev.iplatformmoex.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import space.eliseev.iplatformmoex.mapper.EngineMapper;
-import space.eliseev.iplatformmoex.model.dto.engine.EngineDto;
 import space.eliseev.iplatformmoex.model.dto.engine.EngineJsonDto;
 import space.eliseev.iplatformmoex.model.entity.Engine;
 import space.eliseev.iplatformmoex.service.EngineService;
@@ -16,14 +14,11 @@ import java.util.List;
 public class EngineServiceImpl implements EngineService {
 
     private final EngineClient engineClient;
-    private final EngineMapper engineMapper;
 
     @Override
     public Object getEngines(String lang) {
         List<EngineJsonDto> list = engineClient.getEngines(lang);
-        List<EngineDto> engines = list.get(1).getEngines();
-        List<Engine> engineList = engineMapper.entityToDto(engines);
-        return engineList;
+        List<Engine> engines = list.get(1).getEngines();
+        return engines;
     }
-
 }

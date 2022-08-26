@@ -15,6 +15,6 @@ public interface EngineClient {
 
     String ENGINES_URL = "https://iss.moex.com/iss/engines";
 
-    @GetMapping(value = ".json?iss.meta=off&iss.only=engines&iss.json=extended", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = ".json?iss.meta=off&iss.only=data&iss.json=extended", produces = MediaType.APPLICATION_JSON_VALUE)
     List<EngineJsonDto> getEngines(@RequestParam(value = "lang", required = false) String lang);
 }
