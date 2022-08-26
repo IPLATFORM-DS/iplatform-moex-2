@@ -8,11 +8,22 @@ import org.springframework.web.bind.annotation.RestController;
 import space.eliseev.iplatformmoex.model.enumeration.Engine;
 import space.eliseev.iplatformmoex.model.enumeration.Market;
 import space.eliseev.iplatformmoex.service.SecurityService;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import space.eliseev.iplatformmoex.service.SecurityIndicesService;
 
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/securities")
 public class SecurityController {
+
+    private final SecurityIndicesService securityIndicesService;
+
+    @GetMapping("/{security}")
+    Object getSecurityIndices(@PathVariable String security) {
+        return securityIndicesService.getSecurityIndices(security);
+    }
     private final SecurityService securityService;
 
     @GetMapping
