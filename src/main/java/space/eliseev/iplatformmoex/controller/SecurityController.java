@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.*;
 import space.eliseev.iplatformmoex.model.enumeration.Engine;
 import space.eliseev.iplatformmoex.model.enumeration.Market;
 import space.eliseev.iplatformmoex.service.SecurityService;
-import org.springframework.web.bind.annotation.PathVariable;
 import space.eliseev.iplatformmoex.service.SecurityIndicesService;
 
 @RestController
@@ -29,7 +28,7 @@ public class SecurityController {
     }
 
     @GetMapping("/{security}")
-    Object getSecurityIndices(@PathVariable String security) {
+    public Object getSecurityIndices(@PathVariable String security) {
         return securityIndicesService.getSecurityIndices(security);
     }
 

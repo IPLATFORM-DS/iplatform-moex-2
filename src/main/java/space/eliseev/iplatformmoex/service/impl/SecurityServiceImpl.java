@@ -22,4 +22,5 @@ public class SecurityServiceImpl implements SecurityService {
     public Object getSecurityAggregates(String security, String date, String lang) {
         return securityClient.getSecurityAggregates(security, date, lang);
     }
+
 }
