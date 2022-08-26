@@ -4,7 +4,7 @@ databaseChangeLog:
       author: Dmitriy
       changes:
         - createTable:
-            tableName: security-collection
+            tableName: security_collection
             columns:
               - column:
                   constraints:

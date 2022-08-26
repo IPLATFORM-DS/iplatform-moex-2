@@ -1,4 +1,4 @@
-package space.eliseev.iplatformmoex.services;
+package space.eliseev.iplatformmoex.service;
 
 import space.eliseev.iplatformmoex.model.enumeration.Engine;
 import space.eliseev.iplatformmoex.model.enumeration.Market;

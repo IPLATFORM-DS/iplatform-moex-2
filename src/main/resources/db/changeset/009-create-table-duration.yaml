@@ -12,7 +12,6 @@ databaseChangeLog:
                   constraints:
                     nullable: false
                     primaryKey: true
-                    primaryKeyName: duration_pkey
               - column:
                   name: duration
                   type: INTEGER
@@ -21,8 +20,6 @@ databaseChangeLog:
               - column:
                   name: days
                   type: INTEGER
-                  constraints:
-                    nullable: false
               - column:
                   name: title
                   type: VARCHAR(765)
