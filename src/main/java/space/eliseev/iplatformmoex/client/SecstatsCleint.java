@@ -1,14 +1,12 @@
-package space.eliseev.iplatformmoex.service.client;
+package space.eliseev.iplatformmoex.client;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
-import space.eliseev.iplatformmoex.model.enumeration.Engine;
-import space.eliseev.iplatformmoex.model.enumeration.Market;
 
-import static space.eliseev.iplatformmoex.service.client.SecstatsCleint.SECSTATS_URL;
+import static space.eliseev.iplatformmoex.client.SecstatsCleint.SECSTATS_URL;
 
 @FeignClient(value = "secstats", url = SECSTATS_URL)
 public interface SecstatsCleint {
