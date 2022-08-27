@@ -1,11 +1,11 @@
-package space.eliseev.iplatformmoex.service.impl;
+package space.eliseev.iplatformmoex.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import space.eliseev.iplatformmoex.model.dto.engine.EngineJsonDto;
 import space.eliseev.iplatformmoex.model.entity.Engine;
 import space.eliseev.iplatformmoex.service.EngineService;
-import space.eliseev.iplatformmoex.service.client.EngineClient;
+import space.eliseev.iplatformmoex.client.EngineClient;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package space.eliseev.iplatformmoex.service.client;
+package space.eliseev.iplatformmoex.client;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
@@ -8,7 +8,7 @@ import space.eliseev.iplatformmoex.model.dto.engine.EngineJsonDto;
 
 import java.util.List;
 
-import static space.eliseev.iplatformmoex.service.client.EngineClient.ENGINES_URL;
+import static space.eliseev.iplatformmoex.client.EngineClient.ENGINES_URL;
 
 @FeignClient(value = "engine", url = ENGINES_URL)
 public interface EngineClient {
