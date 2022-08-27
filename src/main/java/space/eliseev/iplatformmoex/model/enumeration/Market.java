@@ -1,35 +1,41 @@
 package space.eliseev.iplatformmoex.model.enumeration;
 
-public enum Market {
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
-    SUGAR,
-    INDEX,
-    SHARES,
-    BONDS,
-    NDM,
-    OTC,
-    CCP,
-    DEPOSIT,
-    REPO,
-    QNV,
-    MAMC,
-    FOREIGNSHARES,
-    FOREIGNNDM,
-    MOEXBOARD,
-    GCC,
-    CREDIT,
-    SELT,
-    FUTURES,
-    MAIN,
-    FORTS,
-    OPTIONS,
-    FORTSIQS,
-    OPTIONSIQS,
-    NONRESNDM,
-    NONRESREPO,
-    NONRESCCP,
-    GRAIN,
-    BUYAUCTIONS,
-    STANDARD,
-    CLASSICA
+@Getter
+@AllArgsConstructor
+public enum Market {
+    SUGAR("sugar"),
+    INDEX("index"),
+    SHARES("shares"),
+    BONDS("bonds"),
+    NDM("ndm"),
+    OTC("otc"),
+    CCP("ccp"),
+    DEPOSIT("deposit"),
+    REPO("repo"),
+    QNV("qnv"),
+    MAMC("mamc"),
+    FOREIGNSHARES("foreignshares"),
+    FOREIGNNDM("foreignndm"),
+    MOEXBOARD("moexboard"),
+    GCC("gcc"),
+    CREDIT("credit"),
+    SELT("selt"),
+    FUTURES("futures"),
+    MAIN("main"),
+    FORTS("forts"),
+    OPTIONS("options"),
+    FORTSIQS("fortsiqs"),
+    OPTIONSIQS("optionsiqs"),
+    NONRESNDM("nonresndm"),
+    NONRESREPO("nonresrepo"),
+    NONRESCCP("nonresccp"),
+    GRAIN("grain"),
+    BUYAUCTIONS("buyauctions"),
+    STANDARD("standard"),
+    CLASSICA("classica");
+
+    private final String name;
 }
