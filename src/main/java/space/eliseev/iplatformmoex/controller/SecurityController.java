@@ -5,15 +5,8 @@ import org.springframework.web.bind.annotation.*;
 import space.eliseev.iplatformmoex.model.enumeration.Engine;
 import space.eliseev.iplatformmoex.model.enumeration.Market;
 import space.eliseev.iplatformmoex.service.SecstatsService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-import space.eliseev.iplatformmoex.model.enumeration.Engine;
-import space.eliseev.iplatformmoex.model.enumeration.Market;
-import space.eliseev.iplatformmoex.service.SecurityService;
-import org.springframework.web.bind.annotation.PathVariable;
 import space.eliseev.iplatformmoex.service.SecurityIndicesService;
+import space.eliseev.iplatformmoex.service.SecurityService;
 
 @RestController
 @RequiredArgsConstructor
