@@ -27,8 +27,18 @@ public class UrlConfig {
     @Value("${secstats}")
     private String secstats;
 
+    public String getSecurity(String security) {
+        return security.replace("[security]", security);
+    }
     public String getAggregates(String security) {
         return aggregates.replace("[security]", security);
+    }
+    public String getIndices(String security) {
+        return indices.replace("[security]", security);
+    }
+
+    public String getSecstats(String engine, String market) {
+        return secstats.replace("[engine]", engine).replace("[market]", market);
     }
 
 }

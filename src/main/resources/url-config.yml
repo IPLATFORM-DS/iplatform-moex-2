@@ -1,16 +1,16 @@
 #  ISS Queries
 
-securities: https://iss.moex.com/iss/securities.json
+securities: https://iss.moex.com/iss/securities.json?iss.meta=off&iss.only=securities&iss.json=extended
 #  Список бумаг торгуемых на московской бирже.
 
-security: https://iss.moex.com/iss/securities/[security].json
+security: https://iss.moex.com/iss/securities/[security].json?iss.meta=off&iss.json=extended
 #  Получить спецификацию инструмента. Например: https://iss.moex.com/iss/securities/IMOEX.xml
 
-indices: https://iss.moex.com/iss/securities/[security]/indices.json
-#  Список индексов в которые входит бумага
-
-aggregates: https://iss.moex.com/iss/securities/[security]/aggregates.json
+aggregates: https://iss.moex.com/iss/securities/[security]/aggregates.json?iss.meta=off&iss.only=aggregates&iss.json=extended
 #  Агрегированные итоги торгов за дату по рынкам
 
-secstats: https://iss.moex.com/iss/engines/[engine]/markets/[market]/secstats.json
+indices: https://iss.moex.com/iss/securities/[security]/indices.json?iss.meta=off&iss.only=data&iss.json=extended&only_actual=1
+#  Список индексов в которые входит бумага
+
+secstats: https://iss.moex.com/iss/engines/[engine]/markets/[market]/secstats.json?iss.meta=off&iss.json=extended
 #  Промежуточные "Итоги дня". Только для фондового рынка

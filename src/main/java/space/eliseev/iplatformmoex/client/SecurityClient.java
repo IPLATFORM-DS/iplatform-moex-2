@@ -3,8 +3,6 @@ package space.eliseev.iplatformmoex.client;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import space.eliseev.iplatformmoex.model.enumeration.Engine;
-import space.eliseev.iplatformmoex.model.enumeration.Market;
 
 import java.net.URI;
 
@@ -12,8 +10,8 @@ import java.net.URI;
 public interface SecurityClient {
     @GetMapping
     Object getSecurities(URI securitiesUri,
-                         @RequestParam(name = "engine", required = false) Engine engine,
-                         @RequestParam(name = "market", required = false) Market market,
+                         @RequestParam(name = "engine", required = false) String engine,
+                         @RequestParam(name = "market", required = false) String market,
                          @RequestParam(name = "q", required = false) String q,
                          @RequestParam(name = "lang", required = false) String lang,
                          @RequestParam(name = "is_trading", required = false) String isTrading,
