@@ -27,8 +27,11 @@ public class UrlConfig {
     @Value("${secstats}")
     private String secstats;
 
+    @Value("${engines}")
+    private String engines;
+
     public String getSecurity(String security) {
-        return security.replace("[security]", security);
+        return this.security.replace("[security]", security);
     }
     public String getAggregates(String security) {
         return aggregates.replace("[security]", security);
@@ -36,7 +39,6 @@ public class UrlConfig {
     public String getIndices(String security) {
         return indices.replace("[security]", security);
     }
-
     public String getSecstats(String engine, String market) {
         return secstats.replace("[engine]", engine).replace("[market]", market);
     }

@@ -48,6 +48,6 @@ public class SecurityController {
                               @RequestParam(name="tradingsession", required = false) Integer tradingsession,
                               @RequestParam(name="securities", required = false) String securities,
                               @RequestParam(name="boardid", required = false) String boardid) {
-        return secstatsService.getSecstats(engine.getName(), market.getName(), tradingsession, securities, boardid);
+        return secstatsService.getSecstats(engine, market, tradingsession, securities, boardid);
     }
 }
