@@ -7,7 +7,6 @@ import space.eliseev.iplatformmoex.model.enumeration.Market;
 import space.eliseev.iplatformmoex.service.SecurityService;
 import space.eliseev.iplatformmoex.service.SecstatsService;
 import space.eliseev.iplatformmoex.service.SecurityIndicesService;
-import space.eliseev.iplatformmoex.service.SecurityService;
 
 @RestController
 @RequiredArgsConstructor
@@ -17,15 +16,6 @@ public class SecurityController {
     private final SecurityIndicesService securityIndicesService;
     private final SecstatsService secstatsService;
 
-
-    @GetMapping("engines/{engine}/markets/{market}/secstats")
-    Object getSecstats(@PathVariable Engine engine,
-                       @PathVariable Market market,
-                       @RequestParam(name="tradingsession", required = false) Integer tradingsession,
-                       @RequestParam(name="securities", required = false) String securities,
-                       @RequestParam(name="boardid", required = false) String boardid) {
-        return secstatsService.getSecstats(engine.getName(), market.getName(), tradingsession, securities, boardid);
-    }
 
     @GetMapping
     public Object getSecurities(@RequestParam(name = "engine", required = false) Engine engine,
@@ -50,5 +40,14 @@ public class SecurityController {
                                         @RequestParam(required = false) String lang,
                                         @RequestParam(required = false) String date) {
         return securityService.getSecurityAggregates(security, date, lang);
+    }
+
+    @GetMapping("/engines/{engine}/markets/{market}/secstats")
+    public Object getSecstats(@PathVariable Engine engine,
+                              @PathVariable Market market,
+                              @RequestParam(name="tradingsession", required = false) Integer tradingsession,
+                              @RequestParam(name="securities", required = false) String securities,
+                              @RequestParam(name="boardid", required = false) String boardid) {
+        return secstatsService.getSecstats(engine.getName(), market.getName(), tradingsession, securities, boardid);
     }
 }
