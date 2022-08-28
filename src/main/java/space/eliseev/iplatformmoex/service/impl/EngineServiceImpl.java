@@ -6,10 +6,8 @@ import org.springframework.stereotype.Service;
 import space.eliseev.iplatformmoex.configuration.UrlConfig;
 import space.eliseev.iplatformmoex.client.EngineClient;
 import space.eliseev.iplatformmoex.model.dto.engine.EngineJsonDto;
-import space.eliseev.iplatformmoex.client.EngineClient;
 import space.eliseev.iplatformmoex.service.EngineService;
 import space.eliseev.iplatformmoex.model.dto.engine.SingleEngineJsonDto;
-import space.eliseev.iplatformmoex.model.entity.Engine;
 
 import java.net.URI;
 import java.util.List;
@@ -28,9 +26,11 @@ public class EngineServiceImpl implements EngineService {
         return list.get(1).getEngines();
     }
 
+    @SneakyThrows
     @Override
     public Object getEngine(String engine, String param, String lang) {
-        List<SingleEngineJsonDto> list=engineClient.getEngine(engine, param, lang);
+        List<SingleEngineJsonDto> list=engineClient.getEngine(
+                new URI(urlConfig.getEngine(engine, param)), lang);
         if(param==null){
             return list;
         }else if(param.equals("engine")){
