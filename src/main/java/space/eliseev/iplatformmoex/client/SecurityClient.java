@@ -2,6 +2,7 @@ package space.eliseev.iplatformmoex.client;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @FeignClient(value = "moex-iss", url = "https://iss.moex.com/iss/securities")
@@ -17,4 +18,7 @@ public interface SecurityClient {
                          @RequestParam(name = "group_by_filter", required = false) String groupByFilter,
                          @RequestParam(name = "limit", required = false) String limit,
                          @RequestParam(name = "start", required = false) Integer start);
+
+    @GetMapping(value = "/{security}/indices.json?iss.meta=off&iss.only=data&iss.json=extended&only_actual=1")
+    Object getSecurityIndices(@PathVariable String security);
 }
