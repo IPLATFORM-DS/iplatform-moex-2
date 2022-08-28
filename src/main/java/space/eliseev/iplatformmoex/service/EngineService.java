@@ -14,4 +14,6 @@ public interface EngineService {
      * @return список доступных торговых систем
      */
     Object getEngines(@Nullable String lang);
+
+    Object getEngine(String engine, @Nullable String param, @Nullable String lang);
 }
