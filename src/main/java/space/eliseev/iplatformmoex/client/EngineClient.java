@@ -3,6 +3,7 @@ package space.eliseev.iplatformmoex.client;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import space.eliseev.iplatformmoex.model.dto.engine.EngineJsonDto;
 
@@ -17,4 +18,7 @@ public interface EngineClient {
 
     @GetMapping(value = ".json?iss.meta=off&iss.only=data&iss.json=extended", produces = MediaType.APPLICATION_JSON_VALUE)
     List<EngineJsonDto> getEngines(@RequestParam(value = "lang", required = false) String lang);
+
+    @GetMapping(value = "/{engine}.json?iss.meta=off&iss.json=extended&iss.only={param}", produces = MediaType.APPLICATION_JSON_VALUE)
+    Object getEngine(@PathVariable String engine, @PathVariable(required = false) String param, @RequestParam(value = "lang", required = false) String lang);
 }

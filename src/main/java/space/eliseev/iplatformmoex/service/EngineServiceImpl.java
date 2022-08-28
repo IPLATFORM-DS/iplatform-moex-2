@@ -21,4 +21,9 @@ public class EngineServiceImpl implements EngineService {
         List<Engine> engines = list.get(1).getEngines();
         return engines;
     }
+
+    @Override
+    public Object getEngine(String engine, String param, String lang) {
+        return engineClient.getEngine(engine, param, lang);
+    }
 }
