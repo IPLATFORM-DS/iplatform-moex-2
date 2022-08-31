@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import space.eliseev.iplatformmoex.model.entity.CheckMetadata;
 
 @Repository
-public interface CheckMetadataRepository extends JpaRepository<CheckMetadata, Long> {
+public interface CheckMetadataRepository extends JpaRepository<CheckMetadata, Integer> {
 
 }
