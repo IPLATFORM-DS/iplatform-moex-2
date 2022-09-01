@@ -7,7 +7,7 @@ import space.eliseev.iplatformmoex.model.enumeration.Market;
 
 public interface SecstatsService {
 
-    Object getSecstats(String engine, String market,
+    Object getSecstats(Engine engine, Market market,
                        @Nullable Integer tradingsession,
                        @Nullable String securities,
                        @Nullable String boardid);
