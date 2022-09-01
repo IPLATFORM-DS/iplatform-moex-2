@@ -29,20 +29,11 @@ public class EngineServiceImpl implements EngineService {
     }
 
     @Override
-    public Object getEngine(Engine engine, EngineParam param, String lang) throws URISyntaxException {
-        if (param == null) {
+    public List<SingleEngineJsonDto> getEngine(Engine engine, EngineParam param, String lang) throws URISyntaxException {
+        if(param==null){
             return engineClient.getEngine(new URI(urlConfig.getEngine(engine.getName(), null)), lang);
-        } else {
-            List<SingleEngineJsonDto> list = engineClient.getEngine(new URI(urlConfig.getEngine(engine.getName(), param.getName())), lang);
-            if (param.getName().equalsIgnoreCase("engine")) {
-                return list.get(1).getEngine();
-            } else if (param.getName().equalsIgnoreCase("timetable")) {
-                return list.get(1).getTimetable();
-            } else if (param.getName().equalsIgnoreCase("dailytable")) {
-                return list.get(1).getDailytable();
-            }
         }
-        return null;
+        return engineClient.getEngine(new URI(urlConfig.getEngine(engine.getName(), param.getName())), lang);
     }
 }
 
