@@ -30,17 +30,28 @@ public class UrlConfig {
     @Value("${engines}")
     private String engines;
 
+    @Value("${engine}")
+    private String engine;
+
     public String getSecurity(String security) {
         return this.security.replace("[security]", security);
     }
+
     public String getAggregates(String security) {
         return aggregates.replace("[security]", security);
     }
+
     public String getIndices(String security) {
         return indices.replace("[security]", security);
     }
+
     public String getSecstats(String engine, String market) {
         return secstats.replace("[engine]", engine).replace("[market]", market);
+    }
+
+    public String getEngine(String engine, String param) {
+        String data = this.engine.replace("[engine]", engine);
+        return param != null ? data.replace("[param]", param) : data.substring(0, data.indexOf("[param]"));
     }
 
 }

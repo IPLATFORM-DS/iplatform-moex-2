@@ -17,3 +17,7 @@ secstats: https://iss.moex.com/iss/engines/[engine]/markets/[market]/secstats.js
 
 engines: https://iss.moex.com/iss/engines.json?iss.meta=off&iss.only=data&iss.json=extended
 #  Получить доступные торговые системы. Например: https://iss.moex.com/iss/engines.xml
+
+engine: https://iss.moex.com/iss/engines/[engine].json?iss.meta=off&iss.json=extended&iss.only[param]
+#  Получить данные о торговой системе. Например: https://iss.moex.com/iss/engines/stock.xml
+
