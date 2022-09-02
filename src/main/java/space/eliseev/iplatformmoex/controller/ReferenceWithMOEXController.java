@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import space.eliseev.iplatformmoex.service.ReferenceWithMOEXService;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/index")
 public class ReferenceWithMOEXController {
@@ -22,8 +24,8 @@ public class ReferenceWithMOEXController {
 
     @GetMapping
     public ResponseEntity getReferenceWithMOEX(){
-        Object reference = service.getReferenceWithMOEX();
-        return new ResponseEntity(reference, HttpStatus.OK);
+        List<Object> reference = service.getReferenceWithMOEX();
+        return new ResponseEntity(reference.get(1), HttpStatus.OK);
     }
 
 }
