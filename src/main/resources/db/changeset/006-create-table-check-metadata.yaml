@@ -11,7 +11,7 @@ databaseChangeLog:
                     primaryKey: true
                     primaryKeyName: check_metadata_id
                   name: id
-                  type: BIGINT
+                  type: integer
               - column:
                   constraints:
                     nullable: false
@@ -31,3 +31,10 @@ databaseChangeLog:
                   remarks: Результат проверки
                   type: BOOLEAN
             tableName: check_metadata
+        - addAutoIncrement:
+            tableName: check_metadata
+            columnName: id
+            columnDataType: integer
+            generationType: ALWAYS
+            incrementBy: 1
+            startsWith: 1
