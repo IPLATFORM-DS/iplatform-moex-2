@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @AllArgsConstructor
 @Getter
-public enum Index {
+public enum Metadata {
 
     /*
     This enum uses in CheckMetadataService for best readable etc.

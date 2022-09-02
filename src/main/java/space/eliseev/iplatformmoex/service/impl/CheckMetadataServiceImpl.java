@@ -5,21 +5,26 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
-import org.springframework.scheduling.annotation.Scheduled;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 import space.eliseev.iplatformmoex.client.CheckMetadataClient;
 import space.eliseev.iplatformmoex.model.entity.*;
+import space.eliseev.iplatformmoex.model.enumeration.Metadata;
 import space.eliseev.iplatformmoex.repository.*;
 import space.eliseev.iplatformmoex.service.CheckMetadataService;
 
+import javax.annotation.PostConstruct;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
-import static space.eliseev.iplatformmoex.model.enumeration.Index.*;
+import static space.eliseev.iplatformmoex.model.enumeration.Metadata.*;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class CheckMetadataServiceImpl implements CheckMetadataService {
 
 
@@ -40,91 +45,68 @@ public class CheckMetadataServiceImpl implements CheckMetadataService {
 
     private final String errorMessage = "Parsing error, while parsing index";
 
+    private final Map<Metadata, JpaRepository> repositories;
+    @PostConstruct
+    private void createMapRepositories () {
+        repositories.put(ENGINES, engineRepository);
+        repositories.put(MARKETS, marketRepository);
+        repositories.put(BOARDS, boardRepository);
+        repositories.put(BOARD_GROUPS, boardGroupRepository);
+        repositories.put(DURATIONS, durationRepository);
+        repositories.put(SECURITY_TYPES, securityTypeRepository);
+        repositories.put(SECURITY_GROUPS, securityGroupRepository);
+        repositories.put(SECURITY_COLLECTIONS, securityCollectionRepository);
+    }
+
     @Override
-    @Scheduled(cron = "0 0 9 * * *")
     public void checkEngine() {
-        CheckMetadata check = new CheckMetadata();
-        List<Engine> enginesFromDB = engineRepository.findAll();
-
-        JsonNode node;
-        try {
-            node = objectMapper.readTree(client.getEnginesMOEX());
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-            throw new RuntimeException(errorMessage);
-        }
-        List<Engine> fromMOEX = objectMapper.convertValue(node.findValue(ENGINES.getName()), new TypeReference<List<Engine>>() {});
-        Index<Engine> comparing = new Index<>(enginesFromDB, fromMOEX);
-        checkMetadataRepository.save(comparing.validateData(check, ENGINES.getName()));
+        JsonNode node = prepareJsonToConvert(client.getEnginesMOEX(), ENGINES);
+        List<Engine> fromMOEX = objectMapper.convertValue(node, new TypeReference<List<Engine>>() {});
+        Index<Engine> comparing = new Index<>((List<Engine>) getListFromDB(ENGINES), fromMOEX);
+        checkMetadataRepository.save(comparing.validateData(ENGINES));
     }
 
     @Override
-    @Scheduled(cron = "0 0 9 * * *")
     public void checkMarket() {
-        CheckMetadata check = new CheckMetadata();
-        List<Market> marketsFromDB = marketRepository.findAll();
-        JsonNode node;
-        try {
-            node = objectMapper.readTree(client.getMarketsMOEX());
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-            throw new RuntimeException(errorMessage);
-        }
-        List<Market> fromMOEX = objectMapper.convertValue(node.findValue(MARKETS.getName()), new TypeReference<List<Market>>() {});
-        Index<Market> comparing = new Index<>(marketsFromDB, fromMOEX);
-        checkMetadataRepository.save(comparing.validateData(check, MARKETS.getName()));
+        JsonNode node = prepareJsonToConvert(client.getMarketsMOEX(), MARKETS);
+        List<Market> fromMOEX = objectMapper.convertValue(node, new TypeReference<List<Market>>() {});
+        Index<Market> comparing = new Index<>((List<Market>) getListFromDB(MARKETS), fromMOEX);
+        checkMetadataRepository.save(comparing.validateData(MARKETS));
     }
 
     @Override
-    @Scheduled(cron = "0 0 9 * * *")
     public void checkBoard() {
-        CheckMetadata check = new CheckMetadata();
-        List<Board> boardsFromDB = boardRepository.findAll();
-        JsonNode node;
-        try {
-            node = objectMapper.readTree(client.getBoardsMOEX());
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-            throw new RuntimeException(errorMessage);
-        }
-        List<Board> fromMOEX = objectMapper.convertValue(node.findValue(BOARDS.getName()), new TypeReference<List<Board>>() {});
-        Index<Board> comparing = new Index<>(boardsFromDB, fromMOEX);
-        checkMetadataRepository.save(comparing.validateData(check, BOARDS.getName()));
+        JsonNode node = prepareJsonToConvert(client.getBoardsMOEX(), BOARDS);
+        List<Board> fromMOEX = objectMapper.convertValue(node, new TypeReference<List<Board>>() {});
+        Index<Board> comparing = new Index<>((List<Board>) getListFromDB((BOARDS)), fromMOEX);
+        checkMetadataRepository.save(comparing.validateData(BOARDS));
     }
 
     @Override
-    @Scheduled(cron = "0 0 9 * * *")
     public void checkBoardGroup() {
-        CheckMetadata check = new CheckMetadata();
-        List<BoardGroup> boardGroupsFromDB = boardGroupRepository.findAll();
-        JsonNode node;
-        try {
-            node = objectMapper.readTree(client.getBoardGroupsMOEX());
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-            throw new RuntimeException(errorMessage);
-        }
-        List<BoardGroup> fromMOEX = objectMapper.convertValue(node.findValue(BOARD_GROUPS.getName()), new TypeReference<List<BoardGroup>>() {});
-        Index<BoardGroup> comparing = new Index<>(boardGroupsFromDB, fromMOEX);
-        checkMetadataRepository.save(comparing.validateData(check, BOARD_GROUPS.getName()));
+        JsonNode node = prepareJsonToConvert(client.getBoardGroupsMOEX(), BOARD_GROUPS);
+        List<BoardGroup> fromMOEX = objectMapper.convertValue(node, new TypeReference<List<BoardGroup>>() {});
+        Index<BoardGroup> comparing = new Index<>((List<BoardGroup>) getListFromDB(BOARD_GROUPS), fromMOEX);
+        checkMetadataRepository.save(comparing.validateData(BOARD_GROUPS));
     }
 
     /*
     Duration entity doesn't extend from BaseEntity and haven't field id. So there we're manually comparing two lists of Durations
      */
     @Override
-    @Scheduled(cron = "0 0 9 * * *")
     public void checkDuration() {
         CheckMetadata check = new CheckMetadata();
         check.setTimestamp(new Date());
         check.setIndex(DURATIONS.getName());
         List<Duration> durationsFromDB = durationRepository.findAll();
-        JsonNode node;
+        JsonNode node = null;
         try {
             node = objectMapper.readTree(client.getDurationsMOEX());
         } catch (JsonProcessingException e) {
-            e.printStackTrace();
-            throw new RuntimeException(errorMessage);
+            log.warn(errorMessage);
+        }
+        if (node == null) {
+            log.warn("Client didn't return a JSON");
         }
         List<Duration> fromMOEX = objectMapper.convertValue(node.findValue(DURATIONS.getName()), new TypeReference<List<Duration>>() {});
         check.setIsValid(true);
@@ -139,55 +121,33 @@ public class CheckMetadataServiceImpl implements CheckMetadataService {
     }
 
     @Override
-    @Scheduled(cron = "0 0 9 * * *")
     public void checkSecurityType() {
-        CheckMetadata check = new CheckMetadata();
-        List<SecurityType> securityTypesFromDB = securityTypeRepository.findAll();
-        JsonNode node;
-        try {
-            node = objectMapper.readTree(client.getSecurityTypesMOEX());
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-            throw new RuntimeException(errorMessage);
-        }
-        List<SecurityType> fromMOEX = objectMapper.convertValue(node.findValue(SECURITY_TYPES.getName()), new TypeReference<List<SecurityType>>() {});
-        Index<SecurityType> comparing = new Index<>(securityTypesFromDB, fromMOEX);
-        checkMetadataRepository.save(comparing.validateData(check, SECURITY_TYPES.getName()));
+        JsonNode node = prepareJsonToConvert(client.getSecurityTypesMOEX(), SECURITY_TYPES);
+
+        List<SecurityType> fromMOEX = objectMapper.convertValue(node, new TypeReference<List<SecurityType>>() {});
+        Index<SecurityType> comparing = new Index<>((List<SecurityType>) getListFromDB(SECURITY_TYPES), fromMOEX);
+        checkMetadataRepository.save(comparing.validateData(SECURITY_TYPES));
     }
 
     @Override
-    @Scheduled(cron = "0 0 9 * * *")
     public void checkSecurityGroup() {
-        CheckMetadata check = new CheckMetadata();
-        List<SecurityGroup> securityGroupsFromDB = securityGroupRepository.findAll();
-        JsonNode node;
-        try {
-            node = objectMapper.readTree(client.getSecurityGroupsMOEX());
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-            throw new RuntimeException(errorMessage);
-        }
-        List<SecurityGroup> fromMOEX = objectMapper.convertValue(node.findValue(SECURITY_GROUPS.getName()), new TypeReference<List<SecurityGroup>>() {});
-        Index<SecurityGroup> comparing = new Index<>(securityGroupsFromDB, fromMOEX);
-        checkMetadataRepository.save(comparing.validateData(check, SECURITY_GROUPS.getName()));
+        JsonNode node = prepareJsonToConvert(client.getSecurityGroupsMOEX(), SECURITY_GROUPS);
+        List<SecurityGroup> fromMOEX = objectMapper.convertValue(node, new TypeReference<List<SecurityGroup>>() {});
+        Index<SecurityGroup> comparing = new Index<>((List<SecurityGroup>) getListFromDB(SECURITY_GROUPS), fromMOEX);
+        checkMetadataRepository.save(comparing.validateData(SECURITY_GROUPS));
     }
 
     @Override
-    @Scheduled(cron = "0 0 9 * * *")
     public void checkSecurityCollection() {
-        CheckMetadata check = new CheckMetadata();
-        List<SecurityCollection> securityCollectionsFromDB = securityCollectionRepository.findAll();
-        JsonNode node;
-        try {
-            node = objectMapper.readTree(client.getSecurityCollections());
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-            throw new RuntimeException(errorMessage);
-        }
-        List<SecurityCollection> fromMOEX = objectMapper.convertValue(node.findValue(SECURITY_COLLECTIONS.getName()), new TypeReference<List<SecurityCollection>>() {});
-        Index<SecurityCollection> comparing = new Index<>(securityCollectionsFromDB, fromMOEX);
-        checkMetadataRepository.save(comparing.validateData(check, SECURITY_COLLECTIONS.getName()));
+        JsonNode node = prepareJsonToConvert(client.getSecurityCollections(), SECURITY_COLLECTIONS);
+        List<SecurityCollection> fromMOEX = objectMapper.convertValue(node, new TypeReference<List<SecurityCollection>>() {});
+        Index<SecurityCollection> comparing = new Index<>((List<SecurityCollection>) getListFromDB(SECURITY_COLLECTIONS), fromMOEX);
+        checkMetadataRepository.save(comparing.validateData(SECURITY_COLLECTIONS));
     }
+
+    /*
+        Generic class to reduce boilerplate and improve readability (I hope so)
+     */
 
     static class Index<T extends BaseEntity> {
         List<T> fromDB;
@@ -198,9 +158,10 @@ public class CheckMetadataServiceImpl implements CheckMetadataService {
             this.fromMOEX = fromMOEX;
         }
 
-        public CheckMetadata validateData (CheckMetadata check, String index) {
+        public CheckMetadata validateData (Metadata enumeration) {
+            CheckMetadata check = new CheckMetadata();
             check.setTimestamp(new Date());
-            check.setIndex(index);
+            check.setIndex(enumeration.getName());
             check.setIsValid(true);
             if (fromDB.size()!=fromMOEX.size()) {
                 check.setIsValid(false);
@@ -216,4 +177,25 @@ public class CheckMetadataServiceImpl implements CheckMetadataService {
            return check;
         }
     }
+
+    /*
+        Find required repo in map
+     */
+    private List<?> getListFromDB(Metadata enumeration) {
+        return (List<?>) repositories.get(enumeration).findAll();
+    }
+
+    /*
+       Take JSON, turn it to tree and find required Objects there
+     */
+    private JsonNode prepareJsonToConvert (String json, Metadata enumeration) {
+        JsonNode node = null;
+        try {
+           node = objectMapper.readTree(json);
+        }  catch (JsonProcessingException  e) {
+            log.warn(errorMessage);
+        }
+        return node != null ? node.findValue(enumeration.getName()) : null;
+    }
+
 }
