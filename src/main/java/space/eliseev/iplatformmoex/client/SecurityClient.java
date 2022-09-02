@@ -24,4 +24,7 @@ public interface SecurityClient {
     Object getSecurityAggregates(URI aggregatesUri,
                                  @RequestParam(required = false) String lang,
                                  @RequestParam(required = false) String date);
+
+    @GetMapping
+    Object getSecurityIndices(URI indicesUri);
 }
