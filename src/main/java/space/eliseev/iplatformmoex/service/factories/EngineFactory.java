@@ -9,6 +9,7 @@ import space.eliseev.iplatformmoex.model.dto.engine.SingleEngineJsonDto;
 import space.eliseev.iplatformmoex.model.enumeration.EngineParam;
 
 import javax.annotation.PostConstruct;
+import java.net.URISyntaxException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -17,14 +18,14 @@ import java.util.function.Supplier;
 
 @Component
 @RequiredArgsConstructor
-public class EngineFromBuilderFactory {
-    private final  EngineFromBuilderParamTimetable timetableP;
-    private final  EngineFromBuilderParamDailyTable dailyTableP;
-    private final  EngineFromBuilderParamEngine engineP;
+public class EngineFactory {
+    private final EngineParamTimetable timetableP;
+    private final EngineParamDailyTable dailyTableP;
+    private final EngineParamEngine engineP;
 
-    private final EngineFromBuilderParamNull nullP;
-    private final Map<String, Supplier<EngineFromBuilder>> map = new HashMap<>();
-    Logger log = LoggerFactory.getLogger(EngineFromBuilderFactory.class);
+    private final EngineParamNull nullP;
+    private final Map<String, Supplier<EngineFactoryInterface>> map = new HashMap<>();
+    private Logger log = LoggerFactory.getLogger(EngineFactory.class);
 
     @PostConstruct
     public void init() {
@@ -40,14 +41,10 @@ public class EngineFromBuilderFactory {
                 .map(formBuilder -> {
                     try {
                         return formBuilder.get().getEngineObjectPart(list);
-                    } catch (Exception e) {
-                        e.printStackTrace();
+                    } catch (URISyntaxException e) {
+                        log.error("Error while parsing URI");
                     }
                     return null;
-                })
-                .orElseThrow(() -> {
-                    log.error("Param type not found");
-                    return new IllegalArgumentException("Error during defining param. Param type not found");
                 });
     }
 }

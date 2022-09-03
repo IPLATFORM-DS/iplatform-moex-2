@@ -8,7 +8,7 @@ import java.util.List;
 
 
 @Service
-public class EngineFromBuilderParamEngine implements EngineFromBuilder{
+public class EngineParamEngine implements EngineFactoryInterface {
 
     @Override
     public List<SingleEngineDTO> getEngineObjectPart(List<SingleEngineJsonDto> list){

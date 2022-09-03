@@ -7,7 +7,7 @@ import space.eliseev.iplatformmoex.model.dto.engine.Timetable;
 import java.util.List;
 
 @Service
-public class EngineFromBuilderParamTimetable implements EngineFromBuilder{
+public class EngineParamTimetable implements EngineFactoryInterface {
 
     @Override
     public List<Timetable> getEngineObjectPart(List<SingleEngineJsonDto> list) {

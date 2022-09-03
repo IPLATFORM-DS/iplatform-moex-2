@@ -13,7 +13,7 @@ import space.eliseev.iplatformmoex.model.dto.engine.EngineJsonDto;
 import space.eliseev.iplatformmoex.model.dto.engine.SingleEngineJsonDto;
 import space.eliseev.iplatformmoex.model.enumeration.Engine;
 import space.eliseev.iplatformmoex.model.enumeration.EngineParam;
-import space.eliseev.iplatformmoex.service.factories.EngineFromBuilderFactory;
+import space.eliseev.iplatformmoex.service.factories.EngineFactory;
 import space.eliseev.iplatformmoex.service.EngineService;
 
 import java.net.URISyntaxException;
@@ -25,8 +25,9 @@ import java.net.URISyntaxException;
 public class EngineController {
 
     private final EngineService engineService;
-    private final EngineFromBuilderFactory factory;
-    @Operation(summary = "Get all engines", description = "It can be used to get the list of all engines")
+    private final EngineFactory factory;
+    @Operation(summary = "Get all engines", description = "It can be used to get the list of all engines",
+            tags = {"engine"})
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", content = @Content(mediaType = "application/json",
                     array = @ArraySchema(schema = @Schema(implementation = EngineJsonDto.class))),
@@ -41,13 +42,15 @@ public class EngineController {
             tags = {"engine"})
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", content = @Content(mediaType = "application/json",
-                    schema = @Schema(implementation = SingleEngineJsonDto.class)),
-                    description = "Successful operation")
+                    array = @ArraySchema(schema = @Schema(implementation = SingleEngineJsonDto.class))),
+                    description = "Successful operation"),
+            @ApiResponse(responseCode = "400", description = "Invalid parameter supplied",
+                    content = @Content)
     })
     @GetMapping(value = "/getEngines/{engine}")
     public Object getEngine(@PathVariable Engine engine,
                             @RequestParam(value = "param", required = false) EngineParam param,
-                            @RequestParam(value = "lang", required = false) String lang) throws URISyntaxException {
+                            @RequestParam(value = "lang", required = false) String lang){
         return factory.showEngineData((param == null) ? null : param.getName(), engineService.getEngine(engine, param, lang));
     }
 }

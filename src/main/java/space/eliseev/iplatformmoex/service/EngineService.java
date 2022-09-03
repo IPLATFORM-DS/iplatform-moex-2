@@ -5,7 +5,6 @@ import space.eliseev.iplatformmoex.model.dto.engine.SingleEngineJsonDto;
 import space.eliseev.iplatformmoex.model.enumeration.Engine;
 import space.eliseev.iplatformmoex.model.enumeration.EngineParam;
 
-import java.net.URISyntaxException;
 import java.util.List;
 
 /**
@@ -21,5 +20,5 @@ public interface EngineService {
      */
     Object getEngines(@Nullable String lang);
 
-    List<SingleEngineJsonDto> getEngine(Engine engine, @Nullable EngineParam param, @Nullable String lang) throws URISyntaxException;
+    List<SingleEngineJsonDto> getEngine(Engine engine, @Nullable EngineParam param, @Nullable String lang);
 }

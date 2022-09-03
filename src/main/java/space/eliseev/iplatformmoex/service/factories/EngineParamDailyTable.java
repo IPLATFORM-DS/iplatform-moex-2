@@ -8,7 +8,7 @@ import space.eliseev.iplatformmoex.model.dto.engine.SingleEngineJsonDto;
 import java.util.List;
 
 @Service
-public class EngineFromBuilderParamDailyTable implements EngineFromBuilder {
+public class EngineParamDailyTable implements EngineFactoryInterface {
 
     @Override
     public List<Dailytable> getEngineObjectPart(List<SingleEngineJsonDto> list) {
