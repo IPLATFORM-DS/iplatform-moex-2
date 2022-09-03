@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import space.eliseev.iplatformmoex.model.entity.*;
 
 @Repository
-public interface DurationRepository extends JpaRepository<Duration, Integer> {
+public interface DurationRepository extends JpaRepository<Duration, Integer>{
 }

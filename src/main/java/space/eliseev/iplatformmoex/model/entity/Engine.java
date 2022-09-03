@@ -9,12 +9,7 @@ import javax.persistence.*;
 @Setter
 @Entity
 @Table(name = "engine")
-public class Engine {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Integer id;
+public class Engine extends BaseEntity {
 
     @Column(name = "name")
     private String name;

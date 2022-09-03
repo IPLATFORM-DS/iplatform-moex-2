@@ -1,5 +1,6 @@
 package space.eliseev.iplatformmoex.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 import javax.persistence.*;
 
@@ -11,11 +12,7 @@ import javax.persistence.*;
 @Builder
 @Entity
 @Table(name = "security_collection")
-public class SecurityCollection {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Integer id;
+public class SecurityCollection extends BaseEntity {
 
     @Column(name = "name",unique = true)
     private String name;
@@ -23,6 +20,7 @@ public class SecurityCollection {
     @Column(name = "title")
     private String title;
 
+    @JsonProperty("security_group_id")
     @Column(name = "security_group_id")
     private Integer securityGroupId;
 
