@@ -1,16 +1,22 @@
 package space.eliseev.iplatformmoex.service;
 
 
-import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.lang.Nullable;
+import org.springframework.stereotype.Service;
+import space.eliseev.iplatformmoex.model.enumeration.Engine;
+import space.eliseev.iplatformmoex.model.enumeration.Index;
 
 import java.util.List;
 
 
-@FeignClient(value = "MOEX-api", url = "https://iss.moex.com/iss/")
+@Service
 public interface ReferenceWithMOEXService {
 
-    @RequestMapping(method = RequestMethod.GET, value = "/index.json?iss.json=extended")
-    List<Object> getReferenceWithMOEX();
+    Object  getReferenceWithMOEX(@Nullable Index param,
+                                       @Nullable  String lang,
+                                       @Nullable Engine engine,
+                                       @Nullable  Integer isTraded,
+                                       @Nullable Integer hideInactive,
+                                       @Nullable String securitygroup,
+                                       @Nullable  String tradeEngine);
 }
