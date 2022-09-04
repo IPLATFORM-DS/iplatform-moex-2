@@ -25,14 +25,14 @@ public class ReferenceWithMOEXServiceImpl implements ReferenceWithMOEXService {
     @Override
     public Object getReferenceWithMOEX(Index param, String lang, Engine engine,
                                              Integer isTraded, Integer hideInactive,
-                                             String securitygroup, String tradeEngine) {
+                                             String securitygroups, String tradeEngine) {
         try {
             if(param==null){
                 return  client.getReferenceWithMOEX(new URI(urlConfig.getIndex(null)),
-                        lang, engine,isTraded, hideInactive, securitygroup, tradeEngine);
+                        lang, engine,isTraded, hideInactive, securitygroups, tradeEngine);
             }
             return  client.getReferenceWithMOEX(new URI(urlConfig.getIndex(param.getName())),
-                    lang, engine,isTraded, hideInactive, securitygroup, tradeEngine);
+                    lang, engine,isTraded, hideInactive, securitygroups, tradeEngine);
         } catch (URISyntaxException e) {
             log.error("Error parsing URL");
         }

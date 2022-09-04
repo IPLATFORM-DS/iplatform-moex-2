@@ -29,10 +29,10 @@ public class ReferenceWithMOEXController {
             @RequestParam(value = "engine", required = false) Engine engine,
             @RequestParam(value = "is_traded", required = false) Integer isTraded,
             @RequestParam(value = "hide_inactive", required = false) Integer hideInactive,
-            @RequestParam(value = "securitygroups", required = false) String securitygroup,
+            @RequestParam(value = "securitygroups", required = false) String securitygroups,
             @RequestParam(value = "trade_engine", required = false) String tradeEngine
     ) {
-        return service.getReferenceWithMOEX(param, lang, engine, isTraded, hideInactive, securitygroup, tradeEngine);
+        return service.getReferenceWithMOEX(param, lang, engine, isTraded, hideInactive, securitygroups, tradeEngine);
 
     }
 
