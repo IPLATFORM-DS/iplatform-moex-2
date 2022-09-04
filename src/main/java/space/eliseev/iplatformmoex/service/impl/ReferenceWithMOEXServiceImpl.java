@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import space.eliseev.iplatformmoex.client.ReferenceWithMOEXClient;
 import space.eliseev.iplatformmoex.configuration.UrlConfig;
+import space.eliseev.iplatformmoex.model.dto.ReferenceWithMOEX.ReferenceWithMOEXJsonDto;
 import space.eliseev.iplatformmoex.model.enumeration.Engine;
 import space.eliseev.iplatformmoex.model.enumeration.Index;
 import space.eliseev.iplatformmoex.service.ReferenceWithMOEXService;
@@ -23,9 +24,9 @@ public class ReferenceWithMOEXServiceImpl implements ReferenceWithMOEXService {
     private static Logger log= LoggerFactory.getLogger(ReferenceWithMOEXServiceImpl.class);
 
     @Override
-    public Object getReferenceWithMOEX(Index param, String lang, Engine engine,
-                                             Integer isTraded, Integer hideInactive,
-                                             String securitygroups, String tradeEngine) {
+    public List<ReferenceWithMOEXJsonDto> getReferenceWithMOEX(Index param, String lang, Engine engine,
+                                                               Integer isTraded, Integer hideInactive,
+                                                               String securitygroups, String tradeEngine) {
         try {
             if(param==null){
                 return  client.getReferenceWithMOEX(new URI(urlConfig.getIndex(null)),
