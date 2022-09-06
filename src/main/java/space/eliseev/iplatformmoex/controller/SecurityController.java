@@ -23,7 +23,7 @@ public class SecurityController {
 
 
     @Operation(summary = "Get list of papers from MOEX",
-            description = "Returns list of papers, " + "Can be find by part of code with Q param also can be group and filter",
+            description = "Returns list of papers, " + "Find by part of code with Q param",
             tags = {"securities"})
     @ApiResponse(responseCode = "200",
             content = @Content(mediaType = "application/json"),
@@ -46,14 +46,14 @@ public class SecurityController {
             tags = {"securities"})
     @ApiResponse(responseCode = "200",
             content = @Content(mediaType = "application/json"),
-            description = "Successfully got list of securities index")
+            description = "Successfully got list of securities indexes")
     @GetMapping("/{security}")
     public Object getSecurityIndices(@PathVariable String security) {
         return securityIndicesService.getSecurityIndices(security);
     }
 
     @Operation(summary = "Get results of the day from MOEX",
-            description = "Returns list of all results filtered by data",
+            description = "Returns list of results filtered by data",
             tags = {"securities"})
     @ApiResponse(responseCode = "200",
             content = @Content(mediaType = "application/json"),
