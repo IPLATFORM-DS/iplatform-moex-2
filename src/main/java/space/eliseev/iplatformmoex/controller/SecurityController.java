@@ -23,7 +23,7 @@ public class SecurityController {
 
 
     @Operation(summary = "Get list of papers from MOEX",
-            description = "Returns list of papers, " + "Find by part of code with Q param",
+            description = "Returns list of papers .Find by part of code with Q param",
             tags = {"securities"})
     @ApiResponse(responseCode = "200",
             content = @Content(mediaType = "application/json"),
