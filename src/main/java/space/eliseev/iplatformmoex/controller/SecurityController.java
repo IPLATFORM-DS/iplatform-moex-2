@@ -1,5 +1,9 @@
 package space.eliseev.iplatformmoex.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import space.eliseev.iplatformmoex.model.enumeration.Engine;
@@ -11,12 +15,19 @@ import space.eliseev.iplatformmoex.service.SecurityIndicesService;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/securities")
+@Tag(name = "securities", description = "Get securities from MOEX")
 public class SecurityController {
     private final SecurityService securityService;
     private final SecurityIndicesService securityIndicesService;
     private final SecstatsService secstatsService;
 
 
+    @Operation(summary = "Get list of papers from MOEX",
+            description = "Returns list of papers, " + "Can be find by part of code with Q param also can be group and filter",
+            tags = {"securities"})
+    @ApiResponse(responseCode = "200",
+            content = @Content(mediaType = "application/json"),
+            description = "Successfully got list of papers from MOEX")
     @GetMapping
     public Object getSecurities(@RequestParam(name = "engine", required = false) Engine engine,
                                 @RequestParam(name = "market", required = false) Market market,
@@ -30,11 +41,23 @@ public class SecurityController {
         return securityService.getSecurities(engine, market, q, lang, isTrading, groupBy, groupByFilter, limit, start);
     }
 
+    @Operation(summary = "Get securities indexes from MOEX",
+            description = "Returns list of all security index",
+            tags = {"securities"})
+    @ApiResponse(responseCode = "200",
+            content = @Content(mediaType = "application/json"),
+            description = "Successfully got list of securities index")
     @GetMapping("/{security}")
     public Object getSecurityIndices(@PathVariable String security) {
         return securityIndicesService.getSecurityIndices(security);
     }
 
+    @Operation(summary = "Get results of the day from MOEX",
+            description = "Returns list of all results filtered by data",
+            tags = {"securities"})
+    @ApiResponse(responseCode = "200",
+            content = @Content(mediaType = "application/json"),
+            description = "Successfully got list of results")
     @GetMapping("/{security}/aggregates")
     public Object getSecurityAggregates(@PathVariable("security") String security,
                                         @RequestParam(required = false) String lang,
@@ -42,6 +65,12 @@ public class SecurityController {
         return securityService.getSecurityAggregates(security, date, lang);
     }
 
+    @Operation(summary = "Get interim results of the day from MOEX",
+            description = "Table filled in after end of current session 1-morning session 2-evening session 3-result of the day",
+            tags = {"securities"})
+    @ApiResponse(responseCode = "200",
+            content = @Content(mediaType = "application/json"),
+            description = "Successfully got list of results")
     @GetMapping("/engines/{engine}/markets/{market}/secstats")
     public Object getSecstats(@PathVariable Engine engine,
                               @PathVariable Market market,
