@@ -1,5 +1,4 @@
-package space.eliseev.iplatformmoex.service;
-
+package space.eliseev.iplatformmoex.service.impl;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.stereotype.Service;
@@ -7,9 +6,9 @@ import space.eliseev.iplatformmoex.client.SecstatsClient;
 import space.eliseev.iplatformmoex.configuration.UrlConfig;
 import space.eliseev.iplatformmoex.model.enumeration.Engine;
 import space.eliseev.iplatformmoex.model.enumeration.Market;
+import space.eliseev.iplatformmoex.service.SecstatsService;
 
 import java.net.URI;
-
 @Service
 @RequiredArgsConstructor
 public class SecstatsServiceImpl implements SecstatsService {
