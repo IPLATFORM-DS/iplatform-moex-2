@@ -30,6 +30,9 @@ public class UrlConfig {
     @Value("${engines}")
     private String engines;
 
+    @Value("${index}")
+    private String index;
+
     public String getSecurity(String security) {
         return this.security.replace("[security]", security);
     }
@@ -41,6 +44,9 @@ public class UrlConfig {
     }
     public String getSecstats(String engine, String market) {
         return secstats.replace("[engine]", engine).replace("[market]", market);
+    }
+    public String getIndex(String param) {
+        return param==null? index.substring(0,index.indexOf("[param]")):index.replace("[param]",param);
     }
 
 }
