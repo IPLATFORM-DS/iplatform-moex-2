@@ -2,8 +2,7 @@ package space.eliseev.iplatformmoex.service.factories;
 
 
 import lombok.RequiredArgsConstructor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import space.eliseev.iplatformmoex.model.dto.engine.SingleEngineJsonDto;
 import space.eliseev.iplatformmoex.model.enumeration.EngineParam;
@@ -18,6 +17,7 @@ import java.util.function.Supplier;
 
 @Component
 @RequiredArgsConstructor
+@Slf4j
 public class EngineFactory {
     private final EngineParamTimetable timetableP;
     private final EngineParamDailyTable dailyTableP;
@@ -25,7 +25,7 @@ public class EngineFactory {
 
     private final EngineParamNull nullP;
     private final Map<String, Supplier<EngineFactoryInterface>> map = new HashMap<>();
-    private Logger log = LoggerFactory.getLogger(EngineFactory.class);
+
 
     @PostConstruct
     public void init() {
@@ -44,7 +44,7 @@ public class EngineFactory {
                     } catch (URISyntaxException e) {
                         log.error("Error while parsing URI");
                     }
-                    return null;
+                    return new Object();
                 });
     }
 }

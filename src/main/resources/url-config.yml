@@ -21,5 +21,5 @@ engines: https://iss.moex.com/iss/engines.json?iss.meta=off&iss.only=data&iss.js
 index:  https://iss.moex.com/iss/index.json?iss.meta=off&iss.json=extended&iss.only=[param]
 #  Получить доступные глобальные справочники ISS. Например: https://iss.moex.com/iss/index.xml
 
-engine: https://iss.moex.com/iss/engines/[engine].json?iss.meta=off&iss.json=extended&iss.only[param]
+engine: https://iss.moex.com/iss/engines/[engine].json?iss.meta=off&iss.json=extended&iss.only=[param]
 #  Получить данные о торговой системе. Например: https://iss.moex.com/iss/engines/stock.xml

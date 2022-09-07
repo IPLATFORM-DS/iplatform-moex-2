@@ -18,6 +18,5 @@ public interface ReferenceWithMOEXService {
                                                          @Nullable Engine engine,
                                                          @Nullable  Integer isTraded,
                                                          @Nullable Integer hideInactive,
-                                                         @Nullable String securitygroups,
                                                          @Nullable  String tradeEngine);
 }

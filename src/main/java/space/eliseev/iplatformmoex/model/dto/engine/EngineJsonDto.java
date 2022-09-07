@@ -1,6 +1,7 @@
 package space.eliseev.iplatformmoex.model.dto.engine;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -13,9 +14,9 @@ import java.util.List;
 @Setter
 @ToString
 @RequiredArgsConstructor
+@JsonIgnoreProperties(value = { "charsetinfo" })
 public class EngineJsonDto {
 
-    public Charsetinfo charsetinfo;
     public List<Engine> engines;
 
 }
