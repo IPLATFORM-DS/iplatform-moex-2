@@ -2,7 +2,6 @@ package space.eliseev.iplatformmoex.service;
 
 
 import org.springframework.lang.Nullable;
-import org.springframework.stereotype.Service;
 import space.eliseev.iplatformmoex.model.dto.ReferenceWithMOEX.ReferenceWithMOEXJsonDto;
 import space.eliseev.iplatformmoex.model.enumeration.Engine;
 import space.eliseev.iplatformmoex.model.enumeration.Index;
@@ -10,7 +9,7 @@ import space.eliseev.iplatformmoex.model.enumeration.Index;
 import java.util.List;
 
 
-@Service
+
 public interface ReferenceWithMOEXService {
 
     List<ReferenceWithMOEXJsonDto>  getReferenceWithMOEX(@Nullable Index param,

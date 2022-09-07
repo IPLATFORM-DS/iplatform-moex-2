@@ -10,6 +10,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "security_group")
+@EqualsAndHashCode
 public class SecurityGroup extends BaseEntity {
 
     @Column(name = "name")

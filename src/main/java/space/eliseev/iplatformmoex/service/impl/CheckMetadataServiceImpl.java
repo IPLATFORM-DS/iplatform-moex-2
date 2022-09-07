@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import liquibase.pro.packaged.T;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -15,10 +16,7 @@ import space.eliseev.iplatformmoex.repository.*;
 import space.eliseev.iplatformmoex.service.CheckMetadataService;
 
 import javax.annotation.PostConstruct;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static space.eliseev.iplatformmoex.model.enumeration.Metadata.*;
 
@@ -112,9 +110,14 @@ public class CheckMetadataServiceImpl implements CheckMetadataService {
         check.setIsValid(true);
         if (durationsFromDB.size() != fromMOEX.size()) {
             check.setIsValid(false);
+            checkMetadataRepository.save(check);
+            updateDurations(durationsFromDB, fromMOEX, durationRepository);
+            return;
+
         } for (int i = 0; i < durationsFromDB.size(); i++) {
             if (!durationsFromDB.get(i).getInterval().equals(fromMOEX.get(i).getInterval())) {
                 check.setIsValid(false);
+                updateDurations(durationsFromDB, fromMOEX, durationRepository);
             }
         }
         checkMetadataRepository.save(check);
@@ -149,7 +152,7 @@ public class CheckMetadataServiceImpl implements CheckMetadataService {
         Generic class to reduce boilerplate and improve readability (I hope so)
      */
 
-    static class Index<T extends BaseEntity> {
+    class Index<T extends BaseEntity> {
         List<T> fromDB;
         List<T> fromMOEX;
 
@@ -165,6 +168,7 @@ public class CheckMetadataServiceImpl implements CheckMetadataService {
             check.setIsValid(true);
             if (fromDB.size()!=fromMOEX.size()) {
                 check.setIsValid(false);
+                updateMetadata(enumeration);
                 return check;
             }
             fromDB.sort(Comparator.comparing(T::getId));
@@ -172,9 +176,31 @@ public class CheckMetadataServiceImpl implements CheckMetadataService {
             for (int i = 0; i < fromDB.size(); i++) {
                 if (!fromDB.get(i).getId().equals(fromMOEX.get(i).getId())) {
                     check.setIsValid(false);
+                    updateMetadata(enumeration);
                 }
             }
            return check;
+        }
+        /*
+        This method work, when check table for relevance return false.
+        It's compare data from MOEX with data in table and adds new rows (or updates the changed data).
+        if the table contains extra data, they will be deleted
+         */
+        private void updateMetadata(Metadata index) {
+            ArrayList<T> db = new ArrayList<>(fromDB);
+            ArrayList<T> moex = new ArrayList<>(fromMOEX);
+            moex.removeAll(db);
+            if (!moex.isEmpty()) {
+                for (T remaining : moex) {
+                    repositories.get(index).save(remaining);
+                }
+            }
+            db.removeAll(fromMOEX);
+            if(!db.isEmpty()) {
+                for (T redundant : db) {
+                    repositories.get(index).delete(redundant);
+                }
+            }
         }
     }
 
@@ -196,6 +222,23 @@ public class CheckMetadataServiceImpl implements CheckMetadataService {
             log.warn(errorMessage);
         }
         return node != null ? node.findValue(enumeration.getName()) : null;
+    }
+
+    /*
+    This method was written because the duration is different from other entities.
+    So it does the same thing as the method updateMetadata in inner class Index
+     */
+    private void updateDurations(List<Duration> fromDB, List<Duration> fromMOEX, DurationRepository repository) {
+        List<Duration> db = new ArrayList<>(fromDB);
+        List<Duration> moex = new ArrayList<>(fromMOEX);
+        moex.removeAll(db);
+        if (!moex.isEmpty()) {
+            repository.saveAll(moex);
+        }
+        db.removeAll(fromMOEX);
+        if (!db.isEmpty()) {
+            repository.deleteAll(db);
+        }
     }
 
 }
