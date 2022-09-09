@@ -17,6 +17,8 @@ import space.eliseev.iplatformmoex.service.EngineService;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -45,6 +47,6 @@ public class EngineServiceImpl implements EngineService {
         }catch(URISyntaxException e){
             log.error("Error while parsing URI");
         }
-        return new ArrayList<>();
+        return Collections.emptyList();
     }
 }

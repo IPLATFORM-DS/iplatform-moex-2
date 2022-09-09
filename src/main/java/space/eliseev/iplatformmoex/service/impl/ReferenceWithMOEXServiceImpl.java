@@ -13,6 +13,7 @@ import space.eliseev.iplatformmoex.service.ReferenceWithMOEXService;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -37,6 +38,6 @@ public class ReferenceWithMOEXServiceImpl implements ReferenceWithMOEXService {
         } catch (URISyntaxException e) {
             log.error("Error parsing URL");
         }
-        return new ArrayList<>();
+        return Collections.emptyList();
     }
 }
