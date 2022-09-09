@@ -43,7 +43,7 @@ public class CheckMetadataServiceImpl implements CheckMetadataService {
 
     private final CheckMetadataClient client;
 
-    private final String errorMessage = "Parsing error, while parsing index";
+    private final String errorMessage = "Parsing error occurred while parsing index";
 
     private final Map<Metadata, JpaRepository> repositories;
     @PostConstruct
