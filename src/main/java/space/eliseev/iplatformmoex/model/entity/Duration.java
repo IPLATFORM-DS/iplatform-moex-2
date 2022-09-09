@@ -10,7 +10,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "duration")
-
+@EqualsAndHashCode
 public class Duration {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
