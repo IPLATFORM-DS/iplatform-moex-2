@@ -10,6 +10,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "security_type")
+@EqualsAndHashCode
 public class SecurityType extends BaseEntity {
 
     @JsonProperty("trade_engine_id")

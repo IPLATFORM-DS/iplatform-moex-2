@@ -10,6 +10,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "board")
+@EqualsAndHashCode
 public class Board extends BaseEntity {
 
     @JsonProperty("board_group_id")

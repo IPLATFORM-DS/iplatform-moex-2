@@ -9,6 +9,7 @@ import javax.persistence.*;
 @Setter
 @Entity
 @Table(name = "engine")
+@EqualsAndHashCode
 public class Engine extends BaseEntity {
 
     @Column(name = "name")

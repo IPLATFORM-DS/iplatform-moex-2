@@ -9,6 +9,7 @@ import javax.persistence.*;
 @Setter
 @Entity
 @Table(name = "market")
+@EqualsAndHashCode
 public class Market extends BaseEntity {
 
     @JsonProperty("trade_engine_id")

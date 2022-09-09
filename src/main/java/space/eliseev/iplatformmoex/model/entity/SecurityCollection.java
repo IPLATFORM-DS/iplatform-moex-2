@@ -12,6 +12,7 @@ import javax.persistence.*;
 @Builder
 @Entity
 @Table(name = "security_collection")
+@EqualsAndHashCode
 public class SecurityCollection extends BaseEntity {
 
     @Column(name = "name",unique = true)
