@@ -29,7 +29,8 @@ public class UrlConfig {
 
     @Value("${engines}")
     private String engines;
-
+    @Value("${engine}")
+    private String engine;
     @Value("${index}")
     private String index;
 
@@ -47,6 +48,10 @@ public class UrlConfig {
     }
     public String getIndex(String param) {
         return param==null? index.substring(0,index.indexOf("[param]")):index.replace("[param]",param);
+    }
+    public String getEngine(String engine, String param) {
+        String data = this.engine.replace("[engine]", engine);
+        return param != null ? data.replace("[param]", param) : data.substring(0, data.indexOf("[param]"));
     }
 
 }

@@ -1,8 +1,7 @@
 package space.eliseev.iplatformmoex.service.factories;
 
 import lombok.RequiredArgsConstructor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import space.eliseev.iplatformmoex.model.dto.ReferenceWithMOEX.ReferenceWithMOEXJsonDto;
 import space.eliseev.iplatformmoex.model.enumeration.Index;
@@ -17,6 +16,7 @@ import java.util.function.Supplier;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class ReferenceWithMOEXFactory {
 
     private final ReferenceWithMOEXParamBoardgroups boardGroups;
@@ -31,7 +31,7 @@ public class ReferenceWithMOEXFactory {
     private final ReferenceWithMOEXParamNull nullParam;
 
     private Map<String, Supplier<ReferenceWithMOEXFactoryInterface>> map = new HashMap<>();
-    private Logger log = LoggerFactory.getLogger(ReferenceWithMOEXFactory.class);
+
 
     @PostConstruct
     public void init() {
@@ -54,7 +54,7 @@ public class ReferenceWithMOEXFactory {
                     } catch (URISyntaxException e) {
                         log.error("Error while parsing URI");
                     }
-                    return null;
+                    return new Object();
                 });
     }
 
